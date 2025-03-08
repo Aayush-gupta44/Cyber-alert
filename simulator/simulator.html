@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Simulator</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: monospace;
+        }
+        .email {
+            border: 1px solid #0f0;
+            padding: 20px;
+            margin: 20px;
+        }
+        .warning {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="email">
+        <p><strong>From:</strong> support@bankk.com</p>
+        <p><strong>Subject:</strong> Urgent: Your account will be locked!</p>
+        <p>Dear Customer,</p>
+        <p>We have detected unusual activity on your account. To secure your account, please <a href="fake-instagram.html" class="phishing-link">click here</a> to verify your details.</p>
+        <p>Thank you,<br>Bank Support Team</p>
+    </div>
+
+    <script>
+        document.querySelector('.phishing-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert("This is a phishing link! Never click on suspicious links in emails.");
+            window.location.href = "clone.html"; // Redirect to the fake Instagram page
+        });
+    </script>
+</body>
+</html>

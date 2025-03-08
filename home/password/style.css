@@ -1,0 +1,160 @@
+/* General body and background styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    background-image: url('ano.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background stays in place while scrolling */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Styling for the container */
+.container {
+    text-align: center;
+    background-color: rgba(44, 44, 44, 0.85); /* Slight transparency */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 420px; /* Increased max-width for better readability */
+    backdrop-filter: blur(5px); /* Applies a subtle blur effect to the background */
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffcc00; /* Changed heading color for emphasis */
+}
+
+/* Styling for the password input container */
+.password-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Styling for the password input */
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-right: 10px; /* Space between input and button */
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    background-color: #444;
+    border-color: #ffcc00; /* Highlight on focus */
+    outline: none;
+}
+
+/* Toggle button styling */
+#toggleVisibilityBtn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #ffcc00;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    width: 80px; /* Make the button a consistent width */
+}
+
+#toggleVisibilityBtn:hover {
+    background-color: #ffbb33;
+    transform: scale(1.05);
+}
+
+/* Strength meter styling */
+.strength-meter {
+    width: 100%;
+    height: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Strength bar styling */
+.strength-bar {
+    height: 100%;
+    width: 0;
+    background-color: red;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Styling for strength text */
+#strengthText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; /* Adjust heading size on small screens */
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    input[type="password"] {
+        font-size: 14px; /* Adjust font size on smaller screens */
+    }
+
+    #toggleVisibilityBtn {
+        font-size: 12px; /* Adjust button font size */
+        padding: 8px 12px; /* Adjust button padding */
+        width: 70px; /* Ensure the button is smaller on mobile */
+    }
+}
+
+/* Animations for a subtle glow effect on the password input */
+input[type="password"]:focus {
+    animation: glow 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 204, 0, 1);
+    }
+}
+
+/* Additional Enhancements */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Further reduce font size for very small screens */
+    }
+
+    input[type="password"], #toggleVisibilityBtn {
+        font-size: 13px; /* Smaller font for very small screens */
+    }
+}
