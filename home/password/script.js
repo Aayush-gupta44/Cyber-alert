@@ -70,7 +70,6 @@ function updateStrengthIndicator(strength) {
 
     // Update the strength bar width and color
     strengthBar.style.width = `${(strength / 6) * 100}%`;
-    strengthBar.style.backgroundColor = color;
 
     // Update the text indicating password strength
     strengthText.textContent = `Password Strength: ${text}`;

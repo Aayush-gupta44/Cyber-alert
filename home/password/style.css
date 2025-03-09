@@ -8,43 +8,45 @@
 
 /* General body and background styling */
 body {
-    font-family: 'Pexico Micro', Arial, sans-serif;
+    font-family: 'Pexico Micro', Arial, sans-serif; /* Use Pexico Micro for the body text */
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
-    position: relative;
+    overflow: hidden; /* Prevents scrollbars */
+    position: relative; /* For positioning the content on top of the video */
 }
 
 /* Video background styling */
 #backgroundVideo {
-    position: absolute;
+    position: absolute; /* Positions the video behind everything */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    z-index: -1; /* Places the video behind other content */
 }
 
 /* Styling for the container */
 .container {
     text-align: center;
-    background-color: rgba(44, 44, 44, 0.75);
+    background-color: rgba(44, 44, 44, 0.75); /* Slightly more opaque container */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
     width: 100%;
-    max-width: 420px;
-    backdrop-filter: blur(5px);
+    max-width: 420px; /* Increased max-width for better readability */
+    backdrop-filter: blur(5px); /* Applies a subtle blur effect to the background */
+    font-family: 'Pexico Micro', sans-serif; /* Ensure the container text uses Pexico Micro */
 }
 
 /* Styling for the text */
 h1 {
     font-size: 36px;
+    font-family: 'Pexico Micro', sans-serif;
 }
 
 /* Styling for the password input and button */
@@ -55,7 +57,7 @@ h1 {
 }
 
 #passwordInput, #toggleVisibilityBtn {
-    font-family: 'Pexico Micro', sans-serif;
+    font-family: 'Pexico Micro', sans-serif; /* Ensure both the input and button use Pexico Micro */
 }
 
 #passwordInput {
@@ -83,13 +85,12 @@ h1 {
 .strength-meter {
     width: 100%;
     height: 20px;
-    background-color: #ddd; /* Light gray background for the meter */
+    background-color: #ddd;
     border-radius: 5px;
     margin-top: 20px;
     border: 1px solid #aaa; /* Border around the entire bar */
 }
 
-/* Black and white chessboard effect for the strength bar */
 .strength-bar {
     height: 100%;
     border-radius: 5px;
@@ -104,19 +105,6 @@ h1 {
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
-}
-
-/* Visually hidden class for accessibility */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* Added for good measure */
 }
 
 /* Styling for password strength levels */
