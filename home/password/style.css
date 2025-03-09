@@ -1,11 +1,14 @@
+/* @font-face to import Pexico Micro Regular font */
+@font-face {
+    font-family: 'Pexico Micro';
+    src: url('PexicoMicro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General body and background styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    background-image: url('ano.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Ensures the background stays in place while scrolling */
+    font-family: 'Pexico Micro', Arial, sans-serif; /* Use Pexico Micro for the body text */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -13,148 +16,114 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden; /* Prevents scrollbars */
+    position: relative; /* For positioning the content on top of the video */
+}
+
+/* Video background styling */
+#backgroundVideo {
+    position: absolute; /* Positions the video behind everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    z-index: -1; /* Places the video behind other content */
 }
 
 /* Styling for the container */
 .container {
     text-align: center;
-    background-color: rgba(44, 44, 44, 0.85); /* Slight transparency */
+    background-color: rgba(44, 44, 44, 0.75); /* Slightly more opaque container */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
     width: 100%;
     max-width: 420px; /* Increased max-width for better readability */
     backdrop-filter: blur(5px); /* Applies a subtle blur effect to the background */
+    font-family: 'Pexico Micro', sans-serif; /* Ensure the container text uses Pexico Micro */
 }
 
-/* Heading styling */
+/* Styling for the text */
 h1 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #ffcc00; /* Changed heading color for emphasis */
+    font-size: 36px;
+    font-family: 'Pexico Micro', sans-serif;
 }
 
-/* Styling for the password input container */
+/* Styling for the password input and button */
 .password-input-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
+    margin-top: 20px;
 }
 
-/* Styling for the password input */
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin-right: 10px; /* Space between input and button */
-    border: 1px solid #444;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
+#passwordInput, #toggleVisibilityBtn {
+    font-family: 'Pexico Micro', sans-serif; /* Ensure both the input and button use Pexico Micro */
+}
+
+#passwordInput {
+    padding: 10px;
+    margin-right: 10px;
     font-size: 16px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-input[type="password"]:focus {
-    background-color: #444;
-    border-color: #ffcc00; /* Highlight on focus */
-    outline: none;
-}
-
-/* Toggle button styling */
-#toggleVisibilityBtn {
-    padding: 10px 15px;
-    font-size: 14px;
-    background-color: #ffcc00;
-    color: #1e1e1e;
-    border: none;
     border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#toggleVisibilityBtn {
+    padding: 10px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-    width: 80px; /* Make the button a consistent width */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
 }
 
 #toggleVisibilityBtn:hover {
-    background-color: #ffbb33;
-    transform: scale(1.05);
+    background-color: #e0e0e0;
 }
 
-/* Strength meter styling */
+/* Styling for strength meter */
 .strength-meter {
     width: 100%;
-    height: 10px;
-    background-color: #444;
+    height: 20px;
+    background-color: #ddd;
     border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    border: 1px solid #aaa; /* Border around the entire bar */
 }
 
-/* Strength bar styling */
 .strength-bar {
     height: 100%;
+    border-radius: 5px;
     width: 0;
-    background-color: red;
-    transition: width 0.3s ease, background-color 0.3s ease;
+    transition: width 0.3s ease;
+    background-image: linear-gradient(45deg, black 25%, white 25%, white 50%, black 50%, black 75%, white 75%, white); /* Black & White Chessboard */
+    background-size: 20px 20px; /* Chessboard effect */
 }
 
-/* Styling for strength text */
+/* Strength text */
 #strengthText {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem; /* Adjust heading size on small screens */
-    }
-
-    .container {
-        padding: 20px;
-        max-width: 90%;
-    }
-
-    input[type="password"] {
-        font-size: 14px; /* Adjust font size on smaller screens */
-    }
-
-    #toggleVisibilityBtn {
-        font-size: 12px; /* Adjust button font size */
-        padding: 8px 12px; /* Adjust button padding */
-        width: 70px; /* Ensure the button is smaller on mobile */
-    }
+/* Styling for password strength levels */
+.very-weak {
+    background-color: red;
 }
 
-/* Animations for a subtle glow effect on the password input */
-input[type="password"]:focus {
-    animation: glow 0.8s ease-in-out infinite alternate;
+.weak {
+    background-color: orange;
 }
 
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
-    }
-    100% {
-        box-shadow: 0 0 15px rgba(255, 204, 0, 1);
-    }
+.medium {
+    background-color: yellow;
 }
 
-/* Additional Enhancements */
-@media (max-width: 400px) {
-    .container {
-        padding: 15px;
-    }
+.strong {
+    background-color: green;
+}
 
-    h1 {
-        font-size: 1.8rem; /* Further reduce font size for very small screens */
-    }
-
-    input[type="password"], #toggleVisibilityBtn {
-        font-size: 13px; /* Smaller font for very small screens */
-    }
+.very-strong {
+    background-color: darkgreen;
 }
