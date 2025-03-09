@@ -1,11 +1,16 @@
-document.getElementById('togglePassword').addEventListener('click', function () {
-    const passwordInput = document.getElementById('password');
-    const toggleButton = this;
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll(".toggle-password");
 
-    // Toggle the type attribute
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-
-    // Toggle the button text
-    toggleButton.textContent = type === 'password' ? '👁️' : '🙈';
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const passwordInput = this.previousElementSibling;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                this.textContent = "🙈"; // Change icon to indicate hiding
+            } else {
+                passwordInput.type = "password";
+                this.textContent = "👁️"; // Change icon to indicate showing
+            }
+        });
+    });
 });

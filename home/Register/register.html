@@ -11,29 +11,32 @@
         <source src="background.mp4" type="video/mp4">
     </video>
 
-   
-    <div class="login-container">
-         <h5>Don't have an account?
-            <a href="#"><br>Register to begin an amazing journey!</a>
-         </h5>
-        <h3>Sign in to your account</h3>
+
+    <div class="register-container">
+        <h3>Register account</h3>
         <form>
             <div class="input-group">
-                
-                <input type="text" id="username" placeholder="Enter Email/Username" required>
+                <input type="text" id="username" placeholder="Enter Username" required>
             </div>
             <div class="input-group">
-                
+                <input type="text" id="username" placeholder="Enter Email Address" required>
+            </div>
+            <div class="input-group">
                 <input type="password" id="password" placeholder="Enter password" required>
                 <button type="button" id="togglePassword" class="toggle-password">👁️</button>
             </div>
-            <button class="sign-in" type="submit">Sign in</button>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Confirm password" required>
+                <button type="button" id="togglePassword" class="toggle-password">👁️</button>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
         </form>
-        <div class="forgot-password">
-            <a href="#">Forgot Password?</a>
-        </div>
-    </div> 
-</div>
+       
+        <h5>Already have an account?
+            <a href="../Login/login.html"><br>Login Here!</a>
+         </h5>
+    </div>
+    
    <script src="./register.js"></script>
 </body>
 </html>

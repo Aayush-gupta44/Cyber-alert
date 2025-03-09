@@ -1,20 +1,17 @@
-document.getElementById('toggleButton').addEventListener('click', function () {
-    const list = document.getElementById('mylist');
-    
-    // Toggle the 'hidden' class to show/hide the list
-    if (list.classList.contains('hidden')) {
-        list.classList.remove('hidden'); // Show the list
-    } else {
-        list.classList.add('hidden'); // Hide the list
-    }
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleButton");
+    const menu = document.getElementById("mylist");
 
-// Close the dropdown if clicked outside
-window.addEventListener('click', function(event) {
-    const button = document.getElementById('toggleButton');
-    const list = document.getElementById('mylist');
-    
-    if (!button.contains(event.target) && !list.contains(event.target)) {
-        list.classList.add('hidden'); // Hide the list if clicked outside
-    }
+    // Toggle menu when button is clicked
+    toggleButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent immediate closing
+        menu.classList.toggle("show");
+    });
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== toggleButton) {
+            menu.classList.remove("show");
+        }
+    });
 });
