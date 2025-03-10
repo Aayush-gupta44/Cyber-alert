@@ -4,9 +4,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    
 }
 
+.header-1 {
+   
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
 .nav-1, .nav-2 {
     transform: translateY(-50px);
     opacity: 0;
@@ -22,9 +28,11 @@ body {
 
 .nav-1 {
     display: flex;
-    justify-content: flex-start;
-    background: #5e0242d1;
-    padding: 5px;
+    justify-content: center;
+    background: #5e0242fb;
+    padding: 0.8px;
+    position: relative;
+    z-index: 100; /* Ensures it stays above nav-2 */
 }
 
 .nav-1 a {
@@ -35,11 +43,12 @@ body {
 }
 
 .upmenu {
+    display: flex;
     margin-left: auto;
     gap: 2px;
 }
 .upmenu a:hover {
-    background-color: #8e00718c;
+    background-color: #8e0072;
     margin: 0;
     padding: 0;
     background-size: cover; /* Cover the entire area */
@@ -55,11 +64,26 @@ body {
 .nav-2 {
     
     display: flex;
-    justify-content:flex-start;
-    background: #063d40a7;
+    justify-content: center; /* Centers .menu1 */
+    align-items: center;
+    background: #063d40;
     padding: 8px;
     gap: 10px;
+    position: relative; 
 }
+.logo-container {
+    position: fixed;  /* Position the logo relative to the viewport */
+    top: 70px;         /* Vertically center the logo */
+    left: 0;          /* Align the logo to the left */
+    transform: translateY(-50%); /* Center the logo exactly in the middle */
+    z-index: 10;      /* Ensure the logo is above nav-2 */
+  }
+  
+  .logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+
+  }
 
 .nav-2 a {
 
@@ -72,6 +96,11 @@ body {
     font-family: sans-serif;
     font-weight: 300;
     padding: 10px;
+    position: relative; /* Positioning context for the button */
+    text-align:center;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    margin-left: 100px;
 }
 .menu1 a:hover {
     background-image: url('background2.jpg');
@@ -81,19 +110,13 @@ body {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     padding: 10px;
+    justify-content: center;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transform: scaleX(1);
     text-decoration: underline;
 }
-
-.header {
-    position: absolute; /* Position the header absolutely */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-}
-
 
 
 .menu3 {
@@ -146,33 +169,23 @@ body {
     margin-top: 100px; /* Space from the top */
 }
 
-.footer-8 {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+
 
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
+    
 }
 
 .background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* Place video behind content */
-    transform: translate(-50%, -50%); /* Center the video */
+    position: fixed; /* Keeps the video in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the full screen */
+    z-index: -1; /* Places the video behind other content */
 }
 
 .content {
@@ -183,15 +196,10 @@ body, html {
     padding: 20px; /* Padding around content */
 }
 
-.menu1 {
-    position: relative; /* Positioning context for the button */
-    text-align: left;
-    margin-bottom: 10px;
-}
 
 /* Three-Dots Button */
 .three-lines {
-    font-size: 24px;
+    font-size: 18px;
     background: none;
     border: none;
     cursor: pointer;
@@ -200,7 +208,10 @@ body, html {
 }
 
 .menu2 {
-    position: relative;
+    position: absolute;
+    top: 1px; /* Adjust based on navbar */
+    left: 10px;
+    z-index: 9999; 
 }
 
 #mylist {
@@ -222,8 +233,7 @@ body, html {
     color: rgb(219, 209, 209);
     padding: 10px 13px;
     font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bold;
+    font-weight: 800;
     transition: background 0.3s ease;
 }
 
@@ -234,21 +244,59 @@ body, html {
 .show {
     display: block !important;
 }
-.index-section1 {
-    background-color: rgba(192, 0, 0, 0.8);
-    color: white;
+
+/* .index-section1 {
+    background-color: rgba(151, 8, 53, 0.406);
+    color: rgb(255, 255, 255);
     padding: 50px;
     max-width: 800px;
     position: absolute;
     top: 50%;
-    left: 360px;
+    left: 430px;
     transform: translate(-50%, -50%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 85%);
-    border-radius: 10px;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 1px;
 }
 
 .index-section1 p {
-    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
     line-height: 1.6;
     text-align: center;
+} */
+
+.index-section1, .index-section2, .index-section3 {
+    background-color: rgba(63, 2, 58, 0.863);
+    color: rgb(255, 255, 255);
+    padding: 50px;
+    max-width: 770px;
+    right: 195px;
+    margin: 20px auto; /* Centers and adds space */
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 1px;
+    text-align: center;
+    position: relative; /* Remove absolute positioning */
+    z-index: -1; /* Sends it behind the navbar */
+    margin-top: 120px; /* Adjust this based on your navbar height */
+}
+
+.index-section1 {
+    margin-top: 140px; /* Adds space below nav */
+}
+
+.index-section1 p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.index-section2 pre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.index-section3 pre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1;
 }
