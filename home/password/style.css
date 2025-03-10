@@ -89,8 +89,12 @@ h1 {
 }
 
 #toggleVisibilityBtn {
-    padding: 12px;
-    font-size: 18px; /* Increased button text size */
+    background-image: url(backgimg.jpg);
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 4px;
+    font-size: 14px; /* Increased button text size */
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -98,7 +102,12 @@ h1 {
 }
 
 #toggleVisibilityBtn:hover {
-    background-color: #e0e0e0;
+    background-image: url(backgimg.jpg);
+    padding: 8px 16px; /* Smaller padding */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+
 }
 
 /* Styling for strength meter */
@@ -148,6 +157,7 @@ h1 {
 
 /* Styling for the "Go Back" button (smaller size, black text) */
 #goBackBtn {
+    background-image: url(backgimg.jpg);
     padding: 8px 16px; /* Smaller padding */
     font-size: 18px; /* Smaller font size */
     cursor: pointer;
@@ -155,7 +165,7 @@ h1 {
     border: 1px solid #ccc;
     background-color: #f0f0f0; /* Same background as the Show/Hide button */
     margin-top: 20px; /* Add margin to separate from the strength meter */
-    color: #000; /* Black text color */
+    color: #000000; /* Black text color */
     font-family: 'Pexico Micro', sans-serif; /* Same font family as the title */
 }
 
