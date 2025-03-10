@@ -234,3 +234,21 @@ body, html {
 .show {
     display: block !important;
 }
+.index-section1 {
+    background-color: rgba(192, 0, 0, 0.8);
+    color: white;
+    padding: 50px;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 360px;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 85%);
+    border-radius: 10px;
+}
+
+.index-section1 p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
