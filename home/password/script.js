@@ -54,22 +54,27 @@ function updateStrengthIndicator(strength) {
     let color = 'red';
     let text = 'Very Weak';
 
-    // Adjust color and text based on strength
-    if (strength >= 4) {
+    // Set color and text based on strength level
+    if (strength >= 1) {
         color = 'orange';
-        text = 'Moderate';
+        text = 'Weak';
     }
-    if (strength >= 5) {
+    if (strength >= 2) {
         color = 'yellow';
+        text = 'Medium';
+    }
+    if (strength >= 3) {
+        color = 'green';
         text = 'Strong';
     }
-    if (strength >= 6) {
-        color = 'green';
+    if (strength >= 4) {
+        color = 'darkgreen';
         text = 'Very Strong';
     }
 
     // Update the strength bar width and color
-    strengthBar.style.width = `${(strength / 6) * 100}%`;
+    strengthBar.style.width = `${(strength / 5) * 100}%`; // Divide by 5 since the strength can go up to 5
+    strengthBar.style.backgroundColor = color;  // Set the color of the strength bar
 
     // Update the text indicating password strength
     strengthText.textContent = `Password Strength: ${text}`;
