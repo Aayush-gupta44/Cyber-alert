@@ -30,29 +30,47 @@ body {
     z-index: -1; /* Places the video behind other content */
 }
 
-/* Styling for the container */
+/* Styling for the container (less transparent) */
 .container {
     text-align: center;
-    background-color: rgba(44, 44, 44, 0.75); /* Slightly more opaque container */
-    padding: 30px;
-    border-radius: 15px;
+    background-color: rgba(44, 44, 44, 0.9); /* Less transparent background */
+    padding: 30px; /* Adjust padding */
+    border-radius: 20px; /* Slightly larger border-radius */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
     width: 100%;
-    max-width: 420px; /* Increased max-width for better readability */
+    max-width: 450px; /* Smaller max-width */
+    height: auto; /* Let the height adjust according to content */
     backdrop-filter: blur(5px); /* Applies a subtle blur effect to the background */
     font-family: 'Pexico Micro', sans-serif; /* Ensure the container text uses Pexico Micro */
+    transform: scale(0.8); /* Start with a smaller size */
+    animation: zoomIn 1s ease-out forwards; /* Slower zoom-in effect */
+}
+
+/* Keyframes for the zoom-in effect (slower) */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Styling for the text */
 h1 {
-    font-size: 36px;
+    font-size: 40px; /* Slightly smaller size for the title */
     font-family: 'Pexico Micro', sans-serif;
+    margin-bottom: 20px; /* Add space below the title */
+    color: #39FF14; /* Neon green color for the title */
 }
 
 /* Styling for the password input and button */
 .password-input-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -61,16 +79,18 @@ h1 {
 }
 
 #passwordInput {
-    padding: 10px;
+    padding: 12px;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 18px; /* Increased input text size */
     border-radius: 5px;
     border: 1px solid #ccc;
+    width: 80%;  /* Make the input take the majority of the container width */
+    max-width: 350px;  /* Prevent it from becoming too wide */
 }
 
 #toggleVisibilityBtn {
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px; /* Increased button text size */
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -95,15 +115,13 @@ h1 {
     height: 100%;
     border-radius: 5px;
     width: 0;
-    transition: width 0.3s ease;
-    background-image: linear-gradient(45deg, black 25%, white 25%, white 50%, black 50%, black 75%, white 75%, white); /* Black & White Chessboard */
-    background-size: 20px 20px; /* Chessboard effect */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Add transition for background color */
 }
 
 /* Strength text */
 #strengthText {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px; /* Increased strength text size */
     margin-top: 10px;
 }
 
@@ -126,4 +144,21 @@ h1 {
 
 .very-strong {
     background-color: darkgreen;
+}
+
+/* Styling for the "Go Back" button (smaller size, black text) */
+#goBackBtn {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 18px; /* Smaller font size */
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0; /* Same background as the Show/Hide button */
+    margin-top: 20px; /* Add margin to separate from the strength meter */
+    color: #000; /* Black text color */
+    font-family: 'Pexico Micro', sans-serif; /* Same font family as the title */
+}
+
+#goBackBtn:hover {
+    background-color: #e0e0e0; /* Same hover effect as Show/Hide button */
 }
