@@ -1,39 +1,31 @@
 /* General Body and Background */
 body {
-    background-color: #121212;
-    font-family: 'Courier New', monospace;
+    background-color: #f4f7f6;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #00FF41; /* Neon Green */
-    overflow-x: hidden;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    color: #00FF41;
+    color: #333;
 }
 
 /* Header Section */
 .header {
-    background: linear-gradient(135deg, #00FF41 20%, #00E5FF);
-    color: black;
-    padding: 20px;
+    background-color: #0078d4;
+    color: white;
+    padding: 15px;
     text-align: center;
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 5px solid #00E5FF;
-    box-shadow: 0 0 15px 5px rgba(0, 229, 255, 0.5);
+    border-bottom: 3px solid #0063a3;
 }
 
 /* Inbox Styling */
 .inbox {
     margin-top: 30px;
     padding: 20px;
-    background-color: #181818;
+    background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Email Rows Styling */
@@ -42,13 +34,13 @@ body {
     justify-content: space-between;
     padding: 15px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ccc;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .email-row:hover {
-    background-color: rgba(0, 255, 65, 0.1);
+    background-color: rgba(0, 120, 212, 0.1);
     transform: scale(1.02);
 }
 
@@ -63,50 +55,20 @@ body {
 .email-action {
     text-align: center;
     font-size: 14px;
-    color: #00E5FF;
+    color: #0078d4;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
 /* Email Content Body Styling */
 .email-body {
     padding: 20px;
-    background-color: #202020;
-    border-radius: 15px;
-    border: 2px solid #444;
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
-    margin-top: 30px;
-    max-height: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-/* Expand Effect */
-.email-body.open {
-    max-height: 500px;
-    opacity: 1;
-}
-
-/* Buttons Styling */
-.button {
-    background-color: #00E5FF;
-    color: black;
-    padding: 12px 24px;
+    background-color: #ffffff;
     border-radius: 8px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s ease;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 
-.button:hover {
-    background-color: #00FF41;
-    transform: scale(1.05);
-}
-
-/* Action Buttons */
 .email-actions {
     margin-top: 20px;
     display: flex;
@@ -114,30 +76,37 @@ body {
 }
 
 .email-actions button {
-    background-color: #00E5FF;
+    background-color: #0078d4;
     padding: 12px 24px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .email-actions button:hover {
-    background-color: #00FF41;
+    background-color: #0056a3;
 }
 
-/* Alert and Feedback Message */
+/* Phishing Email Styling */
+body {
+    background-color: #ffffff;
+}
+
+.email-body {
+    background-color: #fff;
+}
+
 .alert {
     font-weight: bold;
-    color: #FF0000;
+    color: #dc3545;
     margin-top: 20px;
 }
 
 .success {
-    color: #00FF41;
+    color: #28a745;
 }
 
 .error {
-    color: #FF3860;
+    color: #dc3545;
 }
