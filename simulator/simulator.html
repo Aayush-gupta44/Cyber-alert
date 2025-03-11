@@ -1,40 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phishing Simulator</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #0f0;
-            font-family: monospace;
-        }
-        .email {
-            border: 1px solid #0f0;
-            padding: 20px;
-            margin: 20px;
-        }
-        .warning {
-            color: red;
-        }
-    </style>
+    <title>KeyMail Inbox</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="email">
-        <p><strong>From:</strong> support@bankk.com</p>
-        <p><strong>Subject:</strong> Urgent: Your account will be locked!</p>
-        <p>Dear Customer,</p>
-        <p>We have detected unusual activity on your account. To secure your account, please <a href="fake-instagram.html" class="phishing-link">click here</a> to verify your details.</p>
-        <p>Thank you,<br>Bank Support Team</p>
+    <div class="container">
+        <div class="header">
+            <h1>KeyMail Inbox</h1>
+        </div>
+
+        <div class="inbox">
+            <div class="email-row" id="email-1">
+                <div class="email-info">
+                    <span>InstaGraph</span>
+                    <span>Account Access</span>
+                </div>
+                <div class="email-action">Open</div>
+            </div>
+            <div class="email-row" id="email-2">
+                <div class="email-info">
+                    <span>InstaGraph - Urgent</span>
+                    <span>Your Account is About to Be Locked</span>
+                </div>
+                <div class="email-action">Open</div>
+            </div>
+            <div class="email-row" id="email-3">
+                <div class="email-info">
+                    <span>FacePoke</span>
+                    <span>Security Alert</span>
+                </div>
+                <div class="email-action">Open</div>
+            </div>
+            <div class="email-row" id="email-4">
+                <div class="email-info">
+                    <span>CodeHubb</span>
+                    <span>New Repository Created</span>
+                </div>
+                <div class="email-action">Open</div>
+            </div>
+            <div class="email-row" id="email-5">
+                <div class="email-info">
+                    <span>CanNotVa</span>
+                    <span>Your Design is Almost Ready</span>
+                </div>
+                <div class="email-action">Open</div>
+            </div>
+            <div class="email-row" id="email-6">
+                <div class="email-info">
+                    <span>FigMe</span>
+                    <span>Design Changes Made</span>
+                </div>
+                <div class="email-action">Open</div>
+            </div>
+        </div>
+
+        <div id="email-content" class="email-body">
+            <h3>Select an email to view its content.</h3>
+        </div>
+
+        <div id="email-actions" class="email-actions" style="display: none;">
+            <button id="reply-button">Reply</button>
+            <button id="trash-button">Trash</button>
+            <button id="spam-button">Spam</button>
+        </div>
+
+        <div id="action-alert" style="display: none;"></div>
     </div>
 
-    <script>
-        document.querySelector('.phishing-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            alert("This is a phishing link! Never click on suspicious links in emails.");
-            window.location.href = "clone.html"; // Redirect to the fake Instagram page
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
