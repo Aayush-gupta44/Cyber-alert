@@ -21,9 +21,9 @@ toggleVisibilityBtn.addEventListener('click', () => {
     passwordInput.style.backgroundColor = '#333'; // Keep the background consistent
     passwordInput.style.color = '#fff'; // Keep the text color consistent
     passwordInput.style.border = '2px solid #444'; // Keep the border consistent
-
+    
     // Update the button text based on the input type
-    toggleVisibilityBtn.textContent = type === 'password' ? 'Show👁️ ' : 'Hide🙈 ';
+    toggleVisibilityBtn.textContent = type === 'password' ? 'Show👁️' : 'Hide🙈';
 });
 
 // Function to calculate password strength based on different criteria
