@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>About</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../common/header.css">
+    
 </head>
 <body>
+    
+    <iframe src="../common/header.html" frameborder="0" width="100%" height="auto" onload="resizeIframe(this)"></iframe>
+<!-- 
+<script>
+    function resizeIframe(iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+</script> -->
+
+  
     <div class="video-container">
         <video autoplay loop muted class="background1-video">
             <source src="background1.mp4" type="video/mp4">
-            Your browser does not support the video tag...............
+            Your browser does not support the video tag.
         </video>
-    
-        <!-- Table Overlapping the Video (Editable) -->
-        <div class="table-overlay">
-            <table>
-                <tr>
-                    <th contenteditable="true">Header 1</th>
-                    
-                </tr>
-               
-               
-            </table>
-        </div>
     </div>
-        
-        
-    </video>
-    
+
+    <script src="../common/header.js"></script> <!-- Load the script -->
+ 
 </body>
 </html>
