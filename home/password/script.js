@@ -56,19 +56,19 @@ function updateStrengthIndicator(strength) {
 
     // Set color and text based on strength level
     if (strength >= 1) {
-        color = 'orange';
+        color = 'rgba(223, 71, 5, 0.83)';
         text = 'Weak';
     }
     if (strength >= 2) {
-        color = 'yellow';
+        color = 'rgba(224, 24, 108, 0.83)';
         text = 'Medium';
     }
     if (strength >= 3) {
-        color = 'green';
+        color = 'rgba(102, 5, 117, 0.77)';
         text = 'Strong';
     }
     if (strength >= 4) {
-        color = 'darkgreen';
+        color = 'rgba(4, 112, 6, 0.77)';
         text = 'Very Strong';
     }
 
