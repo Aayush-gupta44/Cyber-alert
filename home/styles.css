@@ -249,26 +249,6 @@ body, html {
     display: block !important;
 }
 
-/* .index-section1 {
-    background-color: rgba(151, 8, 53, 0.406);
-    color: rgb(255, 255, 255);
-    padding: 50px;
-    max-width: 800px;
-    position: absolute;
-    top: 50%;
-    left: 430px;
-    transform: translate(-50%, -50%);
-    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
-    border-radius: 1px;
-}
-
-.index-section1 p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    line-height: 1.6;
-    text-align: center;
-} */
-
 .index-section1, .index-section2, .index-section3 {
     background-color: rgba(63, 2, 58, 0.863);
     color: rgb(255, 255, 255);

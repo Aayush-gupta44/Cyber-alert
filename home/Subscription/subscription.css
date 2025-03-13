@@ -23,6 +23,7 @@ body {
 
 .subscription-box:hover {
     transform: scale(1.05);
+    border: 3px solid #ff4081;
 }
 
 .most-popular {
@@ -38,8 +39,13 @@ body {
 
 .premium {
     transform: scale(1.1);
+    
+}
+
+.premium:hover{
     border: 3px solid #ff4081;
 }
+
 
 h2 {
     font-size: 22px;
