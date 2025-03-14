@@ -1,112 +1,102 @@
-/* General Body and Background */
 body {
-    background-color: #f4f7f6;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d0d0d;
+    color: #00ffcc;
     margin: 0;
     padding: 0;
-    color: #333;
+    line-height: 1.6;
 }
 
-/* Header Section */
-.header {
-    background-color: #0078d4;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #0063a3;
-}
-
-/* Inbox Styling */
-.inbox {
-    margin-top: 30px;
+header {
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Email Rows Styling */
-.email-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.email-row:hover {
-    background-color: rgba(0, 120, 212, 0.1);
-    transform: scale(1.02);
-}
-
-.email-info {
-    flex: 1;
-}
-
-.email-info span {
-    display: block;
-}
-
-.email-action {
     text-align: center;
-    font-size: 14px;
-    color: #0078d4;
-    cursor: pointer;
+    border-bottom: 2px solid #00ffcc;
 }
 
-/* Email Content Body Styling */
-.email-body {
+h1 {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+}
+
+main {
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
 }
 
-.email-actions {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+section {
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 
+    0 20px rgba(0, 255, 204, 0.5);
 }
 
-.email-actions button {
-    background-color: #0078d4;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
+.mock-email {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid #00ffcc;
+}
+
+button {
+    padding: 10px 15px;
+    background: #00ffcc;
+    color: #000;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.email-actions button:hover {
-    background-color: #0056a3;
+button:hover {
+    background: #ff00ff;
+    color: #fff;
 }
 
-/* Phishing Email Styling */
-body {
-    background-color: #ffffff;
+.quiz-option {
+    margin: 5px;
+    padding: 10px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.email-body {
-    background-color: #fff;
+.quiz-option:hover {
+    background: #ff00ff;
+    color: #fff;
 }
 
-.alert {
-    font-weight: bold;
-    color: #dc3545;
-    margin-top: 20px;
-}
-
-.success {
-    color: #28a745;
-}
-
-.error {
-    color: #dc3545;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #00ffcc;
 }

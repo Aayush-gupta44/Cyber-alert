@@ -3,46 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeyMail Inbox</title>
+    <title>Phishing Awareness - Cyberpunk Edition</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>KeyMail Inbox</h1>
-        </div>
+    <header>
+        <h1>Phishing Awareness</h1>
+        <nav>
+            <ul>
+                <li><a href="#what-is-phishing">What is Phishing?</a></li>
+                <li><a href="#mock-email">Mock Phishing Email</a></li>
+                <li><a href="#prevention-tips">Prevention Tips</a></li>
+                <li><a href="#quiz">Test Your Knowledge</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="inbox">
-            <div class="email-row" id="email-1">
-                <div class="email-info">
-                    <span>InstaGraph</span>
-                    <span>Account Access</span>
-                </div>
-                <div class="email-action">
-                    <a href="email-page.html?id=email-1" class="button">Open</a>
-                </div>
+    <main>
+        <section id="what-is-phishing">
+            <h2>What is Phishing?</h2>
+            <p>Phishing is a type of cyber attack where attackers impersonate legitimate organizations to steal sensitive information such as usernames, passwords, and credit card details. These attacks often occur through email, social media, or text messages.</p>
+        </section>
+
+        <section id="mock-email">
+            <h2>Mock Phishing Email</h2>
+            <div class="mock-email">
+                <p><strong>From:</strong> support@banking-secure.com</p>
+                <p><strong>Subject:</strong> Urgent: Account Verification Required</p>
+                <p>Dear Customer,</p>
+                <p>Your account has been flagged for suspicious activity. Please verify your account immediately by clicking the link below:</p>
+                <p><a href="http://fake-link.com">Verify Your Account</a></p>
+                <p>Thank you,<br>Banking Secure Support Team</p>
             </div>
-            <div class="email-row" id="email-2">
-                <div class="email-info">
-                    <span>InstaGraph - Urgent</span>
-                    <span>Your Account is About to Be Locked</span>
-                </div>
-                <div class="email-action">
-                    <a href="email-page.html?id=email-2" class="button">Open</a>
-                </div>
+            <p><strong>Can you identify the phishing elements in this email?</strong></p>
+        </section>
+
+        <section id="prevention-tips">
+            <h2>Prevention Tips</h2>
+            <ul>
+                <li>Always verify the sender's email address.</li>
+                <li>Do not click on suspicious links.</li>
+                <li>Use two-factor authentication.</li>
+                <li>Keep your software updated.</li>
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <h2>Test Your Knowledge</h2>
+            <button id="start-quiz">Start Quiz</button>
+            <div id="quiz-container" style="display: none;">
+                <p id="quiz-question"></p>
+                <button class="quiz-option" data-answer="true">True</button>
+                <button class="quiz-option" data-answer="false">False</button>
+                <p id="quiz-result"></p>
             </div>
-            <div class="email-row" id="email-3">
-                <div class="email-info">
-                    <span>FacePoke</span>
-                    <span>Security Alert</span>
-                </div>
-                <div class="email-action">
-                    <a href="email-page.html?id=email-3" class="button">Open</a>
-                </div>
-            </div>
-            <!-- Add more email rows here as needed -->
-        </div>
-    </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Cyberpunk Phishing Awareness. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
