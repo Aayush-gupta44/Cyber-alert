@@ -3,14 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggleButtons.forEach(button => {
         button.addEventListener("click", function () {
-            const passwordInput = this.previousElementSibling;
+            // Find the corresponding input field inside the same parent .input-group
+            const passwordInput = this.closest(".input-group").querySelector("input");
+
+            // Toggle password visibility
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                this.textContent = "🙈"; // Change icon to indicate hiding
+                this.textContent = "Hide"; // Hide icon
             } else {
                 passwordInput.type = "password";
-                this.textContent = "👁️"; // Change icon to indicate showing
+                this.textContent = "Show"; // Show icon
             }
         });
     });
 });
+
+
