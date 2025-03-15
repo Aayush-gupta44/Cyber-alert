@@ -21,7 +21,7 @@ body {
 
 /* Video background styling */
 #backgroundVideo {
-    position: absolute; /* Positions the video behind everything */
+    position: fixed; /* Positions the video behind everything */
     top: 0;
     left: 0;
     width: 100%;
