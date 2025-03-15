@@ -3,49 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber4Life - Platform</title>
-    <link rel="stylesheet" href="platform.css">
+    <title>MCS Platform</title>
+    <link rel="stylesheet" href="../Platform/platform.css">
+    <link rel="stylesheet" href="../common/header.css" type="text/css">
 </head>
 <body>
-
+    <video autoplay loop muted class="background-video">
+        <source src="background3.mp4" type="video/mp4">
+    </video>
+   
     <!-- Header will be loaded dynamically -->
     <div id="header-container"></div>
 
-    <main class="content">
+    <div class="content">
         <h1>Welcome to Cyber4Life Platform</h1>
         <p>Your one-stop solution for cybersecurity awareness, ethical hacking, and cyber defense learning.</p>
-    </main>
+    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("home/common/header.html")  // Corrected path to header.html
-
-
-
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-container").innerHTML = data;
-                    
-                    // Load CSS dynamically for header
-                    let headerStyles = document.createElement("link");
-                    headerStyles.rel = "stylesheet";
-                    headerStyles.href = "home/common/header.css";  // Ensure header CSS is linked
-                    document.head.appendChild(headerStyles);
-
-                    // Re-run scripts inside header.html
-                    let script = document.createElement("script");
-                    script.src = "home/common/header.js";  // Load header's JavaScript
-                    document.body.appendChild(script);
-                })
-                .catch(error => console.error("Error loading header:", error));
-        });
-    </script>
-
-    <script src="platform.js"></script>
-    <script src="home/common/header.js"></script>  // Ensure header's JavaScript is loaded
-
-
-
-
+    <!-- Platform and Header Scripts -->
+    <script src="../Platform/platform.js"></script>
+    <script src="../common/fetch.js"></script>
+    <script src="../common/header.js"></script> 
 </body>
 </html>

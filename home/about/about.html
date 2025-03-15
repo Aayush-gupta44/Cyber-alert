@@ -6,19 +6,14 @@
     <title>About</title>
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="../common/header.css">
-    
 </head>
 <body>
-    
-    <iframe src="../common/header.html" frameborder="0" width="100%" height="auto" onload="resizeIframe(this)"></iframe>
-<!-- 
-<script>
-    function resizeIframe(iframe) {
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-    }
-</script> -->
 
-  
+    <div id="header-container"></div>
+
+
+    
+    <!-- Video Background -->
     <div class="video-container">
         <video autoplay loop muted class="background1-video">
             <source src="background1.mp4" type="video/mp4">
@@ -26,7 +21,11 @@
         </video>
     </div>
 
-    <script src="../common/header.js"></script> <!-- Load the script -->
- 
+    <!-- Content (Heading) -->
+    <h1 class="overlay-text">Aayus Gupta</h1>
+
+    <script src="../common/header.js"></script>
+    <script src="../common/fetch.js"></script>
+
 </body>
 </html>

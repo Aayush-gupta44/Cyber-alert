@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +8,7 @@ body {
 }
 
 .header-1 {
-   
+   z-index: 9999;
     position: fixed;
     width: 100%;
     top: 0;
@@ -72,17 +74,19 @@ body {
 }
 .logo-container {
     position: fixed;  /* Position the logo relative to the viewport */
-    top: 70px;         /* Vertically center the logo */
+    top: 80px;         /* Vertically center the logo */
     left: 0;          /* Align the logo to the left */
     transform: translateY(-50%); /* Center the logo exactly in the middle */
     z-index: 10;      /* Ensure the logo is above nav-2 */
+  
   }
   
   .logo {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
+    width: 120px; /* Adjust the size as needed */
+    height: 90px;
 
   }
+
 
 .nav-2 a {
 
