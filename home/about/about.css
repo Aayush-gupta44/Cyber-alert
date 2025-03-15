@@ -1,25 +1,38 @@
-/* Reset body and html margins/paddings */
+/* Reset default margins & padding */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* Video Container (Full-screen background) */
+
+
+/* Video Background */
 .video-container {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 100%;
+    z-index: -1; /* Place it behind everything */
     overflow: hidden;
 }
 
 /* Background Video */
 .background1-video {
-    position: absolute;
-    top: 0; /* No margin at the top */
-    left: 0; /* No margin at the left */
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire area */
-    z-index: -1; /* Keep video behind the content */
+    object-fit: cover; /* Make video cover entire screen */
+}
+
+/* Overlay Text (h1) */
+.overlay-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure proper centering */
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 5; /* Above video but below iframe */
 }

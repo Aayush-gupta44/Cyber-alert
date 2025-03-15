@@ -74,15 +74,17 @@ body {
 }
 .logo-container {
     position: fixed;  /* Position the logo relative to the viewport */
-    top: 70px;         /* Vertically center the logo */
+    top: 80px;         /* Vertically center the logo */
     left: 0;          /* Align the logo to the left */
     transform: translateY(-50%); /* Center the logo exactly in the middle */
     z-index: 10;      /* Ensure the logo is above nav-2 */
+  
   }
   
   .logo {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
+    width: 120px; /* Adjust the size as needed */
+    height: 90px;
+    
 
   }
 
@@ -166,12 +168,6 @@ body {
     color: rgb(21, 108, 4);
 }
 
-.content {
-    text-align: center; /* Center content */
-    margin-top: 100px; /* Space from the top */
-}
-
-
 
 body, html {
     margin: 0;
@@ -188,14 +184,6 @@ body, html {
     height: 100vh;
     object-fit: cover; /* Ensures the video covers the full screen */
     z-index: -1; /* Places the video behind other content */
-}
-
-.content {
-    position: relative;
-    z-index: 1; /* Place content above video */
-    color: white; /* Text color */
-    text-align: center; /* Center text */
-    padding: 20px; /* Padding around content */
 }
 
 
