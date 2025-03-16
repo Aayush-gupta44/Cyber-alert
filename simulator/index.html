@@ -3,67 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phishing Awareness - Cyberpunk Edition</title>
+    <title>Phishing Awareness - Retro Style</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <header>
         <h1>Phishing Awareness</h1>
-        <nav>
-            <ul>
-                <li><a href="#what-is-phishing">What is Phishing?</a></li>
-                <li><a href="#mock-email">Mock Phishing Email</a></li>
-                <li><a href="#prevention-tips">Prevention Tips</a></li>
-                <li><a href="#quiz">Test Your Knowledge</a></li>
-            </ul>
-        </nav>
+        <p>Think Before You Click!</p>
     </header>
-
+    <nav>
+        <ul>
+            <li><a href="#info">What is Phishing?</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
     <main>
-        <section id="what-is-phishing">
+        <section id="info">
             <h2>What is Phishing?</h2>
-            <p>Phishing is a type of cyber attack where attackers impersonate legitimate organizations to steal sensitive information such as usernames, passwords, and credit card details. These attacks often occur through email, social media, or text messages.</p>
-        </section>
-
-        <section id="mock-email">
-            <h2>Mock Phishing Email</h2>
-            <div class="mock-email">
-                <p><strong>From:</strong> support@banking-secure.com</p>
-                <p><strong>Subject:</strong> Urgent: Account Verification Required</p>
-                <p>Dear Customer,</p>
-                <p>Your account has been flagged for suspicious activity. Please verify your account immediately by clicking the link below:</p>
-                <p><a href="http://fake-link.com">Verify Your Account</a></p>
-                <p>Thank you,<br>Banking Secure Support Team</p>
-            </div>
-            <p><strong>Can you identify the phishing elements in this email?</strong></p>
-        </section>
-
-        <section id="prevention-tips">
-            <h2>Prevention Tips</h2>
+            <p>Phishing is a cyber attack that uses disguised email as a weapon. The goal is to trick the email recipient into believing that the message is something they want or need — like a request from their bank or a note from someone in their company — and to click a link or download an attachment.</p>
+            
+            <h3>History of Phishing</h3>
+            <p>The term "phishing" originated in the 1990s when hackers used fake AOL accounts to steal passwords. The term is a play on the word "fishing," as attackers are "fishing" for sensitive information.</p>
+            
+            <h3>Common Phishing Tactics</h3>
             <ul>
-                <li>Always verify the sender's email address.</li>
-                <li>Do not click on suspicious links.</li>
-                <li>Use two-factor authentication.</li>
-                <li>Keep your software updated.</li>
+                <li><strong>Email Phishing:</strong> The most common form, where attackers send fraudulent emails that appear to be from legitimate sources.</li>
+                <li><strong>SMS Phishing (Smishing):</strong> Phishing attempts via text messages, often containing links to malicious websites.</li>
+                <li><strong>Voice Phishing (Vishing):</strong> Phone calls pretending to be from legitimate organizations, asking for sensitive information.</li>
+                <li><strong>Clone Phishing:</strong> A legitimate email is taken and modified to include a malicious link or attachment, then sent to the original recipient.</li>
             </ul>
+            
+            <h3>How to Recognize Phishing Attempts</h3>
+            <ul>
+                <li>Check the sender's email address for misspellings or unusual domains.</li>
+                <li>Look for generic greetings like "Dear Customer" instead of your name.</li>
+                <li>Be cautious of urgent language that pressures you to act quickly.</li>
+                <li>Hover over links to see the actual URL before clicking.</li>
+                <li>Be wary of unexpected attachments or links.</li>
+            </ul>
+            
+            <h3>Tips for Protection</h3>
+            <ul>
+                <li>Use two-factor authentication (2FA) whenever possible.</li>
+                <li>Keep your software and antivirus programs up to date.</li>
+                <li>Educate yourself and others about phishing tactics.</li>
+                <li>Report phishing attempts to your email provider or IT department.</li>
+                <li>Trust your instincts; if something seems off, it probably is.</li>
+            </ul>
+            
+            <button id="learnMoreBtn">Take the Quiz</button>
+        </section>
+        
+        <section id="quiz" style="display: none;">
+            <h2>Phishing Quiz</h2>
+            <p>Is this email a phishing attempt?</p>
+            <img src="phishing-example.jpg" alt="Phishing Email Example" id="phishingImage">
+            <button class="quiz-btn" data-answer="true">Yes</button>
+            <button class="quiz-btn" data-answer="false">No</button>
+            <p id="quizResult"></p>
+            <button id="nextQuizBtn" style="display: none;">Next Question</button>
         </section>
 
-        <section id="quiz">
-            <h2>Test Your Knowledge</h2>
-            <button id="start-quiz">Start Quiz</button>
-            <div id="quiz-container" style="display: none;">
-                <p id="quiz-question"></p>
-                <button class="quiz-option" data-answer="true">True</button>
-                <button class="quiz-option" data-answer="false">False</button>
-                <p id="quiz-result"></p>
-            </div>
+        <section id="resources" style="display: none;">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://www.consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" target="_blank">FTC: How to Recognize and Avoid Phishing Scams</a></li>
+                <li><a href="https://www.phishing.org/" target="_blank">Phishing.org</a></li>
+                <li><a href="https://www.cyber.gov.au/acsc/view-all-content/advice/what-phishing" target="_blank">Australian Cyber Security Centre: What is Phishing?</a></li>
+            </ul>
         </section>
     </main>
-
     <footer>
-        <p>&copy; 2023 Cyberpunk Phishing Awareness. All rights reserved.</p>
+        <p>&copy; 2023 Phishing Awareness</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
