@@ -1,143 +1,196 @@
-/* General Body and Background */
-body {
-    background-color: #121212;
-    font-family: 'Courier New', monospace;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #00FF41; /* Neon Green */
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    color: #00FF41;
+/* Body Styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-/* Header Section */
-.header {
-    background: linear-gradient(135deg, #00FF41 20%, #00E5FF);
-    color: black;
+/* Video Background only for main content */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header Styling */
+header {
+    color: white;
     padding: 20px;
     text-align: center;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 5px solid #00E5FF;
-    box-shadow: 0 0 15px 5px rgba(0, 229, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
 }
 
-/* Inbox Styling */
-.inbox {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #181818;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Email Rows Styling */
-.email-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #444;
-    cursor: pointer;
-    transition: background 0.3s ease;
+header p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.email-row:hover {
-    background-color: rgba(0, 255, 65, 0.1);
-    transform: scale(1.02);
-}
-
-.email-info {
-    flex: 1;
-}
-
-.email-info span {
-    display: block;
-}
-
-.email-action {
+/* Navigation Bar Styling */
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
     text-align: center;
-    font-size: 14px;
-    color: #00E5FF;
-    cursor: pointer;
-    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 }
 
-/* Email Content Body Styling */
-.email-body {
-    padding: 20px;
-    background-color: #202020;
-    border-radius: 15px;
-    border: 2px solid #444;
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
-    margin-top: 30px;
-    max-height: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+nav ul {
+    list-style-type: none;
 }
 
-/* Expand Effect */
-.email-body.open {
-    max-height: 500px;
-    opacity: 1;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Buttons Styling */
-.button {
-    background-color: #00E5FF;
-    color: black;
-    padding: 12px 24px;
-    border-radius: 8px;
+nav a {
+    color: #f4f4f4;
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s ease;
 }
 
-.button:hover {
-    background-color: #00FF41;
+nav a:hover {
+    text-decoration: underline;
+    color: #ff6b6b;
+}
+
+/* Main Content Area Styling */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Button Styling for Take the Quiz */
+#learnMoreBtn {
+    background-image: url('backgimg.jpg'); /* Keep the background image */
+    background-size: cover; /* Ensure the image covers the entire button */
+    background-position: center; /* Center the image */
+    color: #ff00ff; /* Neon pink text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Reduce padding for smaller button */
+    font-size: 1em; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Retro font */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for the Take the Quiz button */
+#learnMoreBtn:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Darken the background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    color: #ff1493; /* Neon pink hover color */
+}
+
+/* Adding neon glowing effect to the text */
+#learnMoreBtn {
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff; /* Neon pink glow effect */
+}
+/* Quiz Section Styling */
+.quiz-question {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.quiz-question:hover {
     transform: scale(1.05);
 }
 
-/* Action Buttons */
-.email-actions {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+#phishingImage {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ff6b6b;
+    margin: 10px 0;
 }
 
-.email-actions button {
-    background-color: #00E5FF;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-weight: bold;
+/* Quiz Button Styling */
+.quiz-btn {
+    background-color: #ff6b6b;
+    color: white;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
 }
 
-.email-actions button:hover {
-    background-color: #00FF41;
+.quiz-btn:hover {
+    background-color: #f7d94c;
+    transform: scale(1.05);
 }
 
-/* Alert and Feedback Message */
-.alert {
+/* Result and Next Button */
+#nextQuizBtn {
+    background-color: #f7d94c;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     font-weight: bold;
-    color: #FF0000;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#nextQuizBtn:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* Quiz Result Styling */
+#quizResult {
     margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6b6b;
 }
 
-.success {
-    color: #00FF41;
-}
-
-.error {
-    color: #FF3860;
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
