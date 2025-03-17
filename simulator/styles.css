@@ -83,16 +83,44 @@ nav a:hover {
 /* Main Content Area Styling */
 main {
     padding: 20px;
-    max-width: 900px; /* Increase max width for larger box */
+    max-width: 900px;
     margin: auto;
     position: relative;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
+/* Button Styling for Take the Quiz */
+#learnMoreBtn {
+    background-image: url('backgimg.jpg'); /* Keep the background image */
+    background-size: cover; /* Ensure the image covers the entire button */
+    background-position: center; /* Center the image */
+    color: #ff00ff; /* Neon pink text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Reduce padding for smaller button */
+    font-size: 1em; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Retro font */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for the Take the Quiz button */
+#learnMoreBtn:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Darken the background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    color: #ff1493; /* Neon pink hover color */
+}
+
+/* Adding neon glowing effect to the text */
+#learnMoreBtn {
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff; /* Neon pink glow effect */
+}
 /* Quiz Section Styling */
 .quiz-question {
-    background: rgba(0, 0, 0, 0.8); /* Dark background for each question */
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid #ff6b6b;
     border-radius: 10px;
     padding: 20px;
@@ -101,12 +129,10 @@ main {
     transition: transform 0.2s ease-in-out;
 }
 
-/* Hover effect for quiz question boxes */
 .quiz-question:hover {
     transform: scale(1.05);
 }
 
-/* Make images within the questions responsive */
 #phishingImage {
     max-width: 100%;
     height: auto;
@@ -114,7 +140,7 @@ main {
     margin: 10px 0;
 }
 
-/* Button Styling for Quiz */
+/* Quiz Button Styling */
 .quiz-btn {
     background-color: #ff6b6b;
     color: white;
