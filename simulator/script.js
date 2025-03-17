@@ -1,67 +1,92 @@
-// Email interactions - Expand email content and perform actions (Reply, Trash, Spam)
-document.getElementById("email-1").addEventListener('click', function() {
-    expandEmail("InstaGraph", "Your InstaGraph account has been accessed", `
-        <p>Hi, we noticed a new login to your InstaGraph account from a new device. If this was you, no further action is required.</p>
-        <p>If you did not perform this action, please visit the <a href="https://www.instagram.com/accounts/login" class="button" target="_blank">Instagram login page</a> to secure your account.</p>
-    `, false); // false indicates this is a legit email
+document.getElementById('learnMoreBtn').addEventListener('click', function() {
+    document.getElementById('info').style.display = 'none'; // Hide info section
+    document.getElementById('quiz').style.display = 'block'; // Show quiz section
+    showNextQuestion(); // Display the first question
 });
 
-document.getElementById("email-2").addEventListener('click', function() {
-    expandEmail("InstaGraph - Urgent", "Urgent: Your account is about to be locked!", `
-        <p>Dear customer, we noticed suspicious activity on your account. Please <a href="http://example.com/fake-page" class="phishing-link" target="_blank">click here</a> to verify your identity and prevent your account from being locked.</p>
-        <p>If you do not act quickly, your account may be locked permanently!</p>
-    `, true); // true indicates this is a phishing email
-});
+let currentQuiz = 0;
+let score = 0;
+const totalQuestions = 14; // Total number of questions (update this if more questions are added)
+let userAnswers = []; // To track user answers
 
-document.getElementById("email-3").addEventListener('click', function() {
-    expandEmail("FacePoke", "Security Alert: Unusual login attempt", `
-        <p>Hi, we noticed a new login to your FacePoke account from a new device. If this was you, no further action is required.</p>
-        <p>If you did not perform this action, please visit <a href="https://www.facebook.com/login" class="button" target="_blank">Facebook login page</a> to secure your account.</p>
-    `, false); // legit email
-});
+// Function to display the next question
+function showNextQuestion() {
+    const allQuestions = document.querySelectorAll('.quiz-question');
 
-// Expand the email with the given content
-function expandEmail(subject, title, content, isPhishing) {
-    document.getElementById("email-content").innerHTML = `
-        <h3>${subject}</h3>
-        <p><strong>Subject:</strong> ${title}</p>
-        ${content}
-    `;
-    document.getElementById("email-actions").style.display = "block";
-    document.getElementById("action-alert").style.display = "none";
-
-    document.getElementById("email-content").classList.add("open");
-
-    // Handling the actions for the email
-    document.getElementById("reply-button").onclick = function() {
-        showFeedback(isPhishing, "reply");
-    };
-    document.getElementById("trash-button").onclick = function() {
-        showFeedback(isPhishing, "trash");
-    };
-    document.getElementById("spam-button").onclick = function() {
-        showFeedback(isPhishing, "spam");
-    };
-}
-
-// Show feedback based on user action (reply, trash, spam)
-function showFeedback(isPhishing, action) {
-    let message;
-    if (isPhishing) {
-        if (action === "reply") {
-            message = "Oops! You were wrong. Replying to a phishing email is a bad idea!";
-        } else {
-            message = "Great job! You've correctly marked the phishing email as trash or spam!";
-        }
-    } else {
-        if (action === "reply") {
-            message = "Great job! This is a legitimate email.";
-        } else {
-            message = "Oops! This is a legitimate email. Deleting or marking it as spam is a mistake!";
-        }
+    // Hide current question
+    if (currentQuiz > 0) {
+        allQuestions[currentQuiz - 1].style.display = 'none';
     }
 
-    document.getElementById("action-alert").style.display = "block";
-    document.getElementById("action-alert").className = isPhishing ? "error" : "success";
-    document.getElementById("action-alert").innerHTML = message;
+    // Show next question
+    if (currentQuiz < allQuestions.length) {
+        allQuestions[currentQuiz].style.display = 'block';
+    }
+
+    // If it's the last question, show the result
+    if (currentQuiz === allQuestions.length - 1) {
+        document.getElementById('nextQuizBtn').style.display = 'block';
+    }
+}
+
+// Quiz button handling
+const quizButtons = document.querySelectorAll('.quiz-btn');
+quizButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const answer = this.getAttribute('data-answer') === 'true';
+        const questionId = this.getAttribute('data-question');
+
+        // Store the user's answer
+        userAnswers[questionId - 1] = answer;
+
+        // Increase score if correct
+        if (answer) {
+            score++;
+        }
+
+        // Proceed to the next question
+        currentQuiz++;
+        showNextQuestion();
+    });
+});
+
+// Finish the quiz and show results
+function finishQuiz() {
+    let resultText = `You scored ${score} out of ${totalQuestions}.`;
+
+    // Determine feedback based on score
+    if (score < totalQuestions / 2) {
+        resultText += " Unsatisfactory.";
+    } else if (score >= totalQuestions - 2) {
+        resultText += " Excellent!";
+    } else {
+        resultText += " Satisfactory.";
+    }
+
+    document.getElementById('quizResult').innerText = resultText;
+
+    // Hide the 'Next' button
+    document.getElementById('nextQuizBtn').style.display = 'none';
+
+    // Display correct answers
+    displayCorrectAnswers();
+}
+
+// Function to display the correct answers after the quiz
+function displayCorrectAnswers() {
+    const questions = document.querySelectorAll('.quiz-question');
+    questions.forEach((question, index) => {
+        const buttons = question.querySelectorAll('.quiz-btn');
+        buttons.forEach(button => {
+            if (button.getAttribute('data-answer') === 'true') {
+                button.style.backgroundColor = '#4CAF50'; // Green for correct answers
+            } else {
+                button.style.backgroundColor = '#f44336'; // Red for incorrect answers
+            }
+        });
+
+        // Show the correct answer
+        const correctAnswer = question.querySelector(`[data-answer="true"]`);
+        question.innerHTML += `<p><strong>Correct Answer: ${correctAnswer.innerText}</strong></p>`;
+    });
 }
