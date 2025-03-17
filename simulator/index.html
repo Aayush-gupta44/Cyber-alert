@@ -63,10 +63,30 @@
         
         <section id="quiz" style="display: none;">
             <h2>Phishing Quiz</h2>
-            <p>Is this email a phishing attempt?</p>
-            <img src="phishing-example.jpg" alt="Phishing Email Example" id="phishingImage">
-            <button class="quiz-btn" data-answer="true">Yes</button>
-            <button class="quiz-btn" data-answer="false">No</button>
+            
+            <div class="quiz-question" style="display: block;">
+                <p>Is this email a phishing attempt?</p>
+                <img src="phishing-example1.jpg" alt="Phishing Email Example" id="phishingImage">
+                <button class="quiz-btn" data-answer="true">Yes</button>
+                <button class="quiz-btn" data-answer="false">No</button>
+            </div>
+
+            <div class="quiz-question" style="display: none;">
+                <p>Is this website trying to steal your credentials?</p>
+                <img src="phishing-example2.jpg" alt="Phishing Website Example" id="phishingImage">
+                <button class="quiz-btn" data-answer="true">Yes</button>
+                <button class="quiz-btn" data-answer="false">No</button>
+            </div>
+
+            <div class="quiz-question" style="display: none;">
+                <p>Is this SMS message a phishing attempt?</p>
+                <img src="phishing-example3.jpg" alt="Phishing SMS Example" id="phishingImage">
+                <button class="quiz-btn" data-answer="true">Yes</button>
+                <button class="quiz-btn" data-answer="false">No</button>
+            </div>
+
+            <!-- Add more questions here -->
+
             <p id="quizResult"></p>
             <button id="nextQuizBtn" style="display: none;">Next Question</button>
         </section>
@@ -80,9 +100,11 @@
             </ul>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2023 Phishing Awareness</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
