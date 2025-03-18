@@ -25,9 +25,10 @@ body {
 
 .container {
 
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1100px;
     text-align: center;
+    padding: 70px;
     padding: 20px;
     z-index: -1;
 }
@@ -108,7 +109,7 @@ h2 {
     margin-top: 5px;
 }
 
-.buy-now {
+.enroll {
     
     margin-top: 10px;
     padding: 10px 20px;
@@ -120,7 +121,7 @@ h2 {
     float: right;
 }
 
-.buy-now:hover {
+.enroll:hover {
     background: #e6008e;
 }
 
