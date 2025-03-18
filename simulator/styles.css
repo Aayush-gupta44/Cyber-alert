@@ -83,64 +83,31 @@ nav a:hover {
 /* Main Content Area Styling */
 main {
     padding: 20px;
-    max-width: 900px;
+    max-width: 900px; /* Increase max width for larger box */
     margin: auto;
     position: relative;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
-/* Button Styling for Take the Quiz */
-#learnMoreBtn {
-    background-image: url('backgimg.jpg'); /* Keep the background image */
-    background-size: cover; /* Ensure the image covers the entire button */
-    background-position: center; /* Center the image */
-    color: #ff00ff; /* Neon pink text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Reduce padding for smaller button */
-    font-size: 1em; /* Smaller font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center the text */
-    border-radius: 10px; /* Rounded corners */
-    font-family: 'Courier New', Courier, monospace; /* Retro font */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-    transition: background-color 0.3s, transform 0.2s, color 0.3s; /* Smooth transitions */
-}
-
-/* Hover effect for the Take the Quiz button */
-#learnMoreBtn:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* Darken the background on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-    color: #ff1493; /* Neon pink hover color */
-}
-
-/* Adding neon glowing effect to the text */
-#learnMoreBtn {
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff; /* Neon pink glow effect */
-}
 /* Quiz Section Styling */
 .quiz-question {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Dark background for each question */
     border: 2px solid #ff6b6b;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
+    display: none; /* Hide all questions initially */
 }
 
+/* Hover effect for quiz question boxes */
 .quiz-question:hover {
     transform: scale(1.05);
 }
 
-#phishingImage {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ff6b6b;
-    margin: 10px 0;
-}
-
-/* Quiz Button Styling */
+/* Button Styling for Quiz */
 .quiz-btn {
     background-color: #ff6b6b;
     color: white;
@@ -158,30 +125,41 @@ main {
     transform: scale(1.05);
 }
 
-/* Result and Next Button */
-#nextQuizBtn {
-    background-color: #f7d94c;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s, transform 0.2s;
+/* Button Styling for Result Feedback */
+.quiz-btn.correct {
+    background-color: green; /* Correct answer */
 }
 
-#nextQuizBtn:hover {
-    background-color: #ff6b6b;
-    transform: scale(1.05);
+.quiz-btn.incorrect {
+    background-color: red; /* Incorrect answer */
 }
 
-/* Quiz Result Styling */
+/* Result and Remarks */
 #quizResult {
     margin-top: 20px;
     font-size: 1.5em;
     font-weight: bold;
     color: #ff6b6b;
+    text-align: center;
+}
+
+/* Remarks Styling */
+#remarks {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#remarks.unsatisfactory {
+    color: red;
+}
+
+#remarks.satisfactory {
+    color: #ff6b6b;
+}
+
+#remarks.excellent {
+    color: green;
 }
 
 /* Footer Styling */
@@ -193,4 +171,31 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+#learnMoreBtn {
+    background-image: url('backgimg.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the button */
+    background-position: center; /* Centers the background image */
+    color: #ff6b6b; /* Neon pink text color */
+    font-family: 'Courier New', Courier, monospace; /* Font family */
+    font-size: 1.5em; /* Font size */
+    padding: 15px 30px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to a pointer */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Align text inside the button */
+    display: inline-block; /* To make it behave like a button */
+    text-decoration: none; /* Remove underline from text */
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.8); /* Neon pink glow effect */
+}
+
+#learnMoreBtn:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay on hover */
+    color: #ff6b6b; /* Keep the neon pink text color on hover */
+    box-shadow: 0 0 25px rgba(255, 107, 107, 1); /* Enhanced neon glow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+#learnMoreBtn:focus {
+    outline: none; /* Remove focus outline */
 }
