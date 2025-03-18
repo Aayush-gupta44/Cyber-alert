@@ -1,5 +1,7 @@
 /* styles.css */
 
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +10,7 @@ body {
 }
 
 .header-1 {
-   
+   z-index: 9999;
     position: fixed;
     width: 100%;
     top: 0;
@@ -72,7 +74,7 @@ body {
     gap: 10px;
     position: relative; 
 }
-logo-container {
+.logo-container {
     position: fixed;  /* Position the logo relative to the viewport */
     top: 80px;         /* Vertically center the logo */
     left: 0;          /* Align the logo to the left */
@@ -168,6 +170,12 @@ logo-container {
     color: rgb(21, 108, 4);
 }
 
+.content {
+    text-align: center; /* Center content */
+    margin-top: 100px; /* Space from the top */
+}
+
+
 
 body, html {
     margin: 0;
@@ -184,6 +192,14 @@ body, html {
     height: 100vh;
     object-fit: cover; /* Ensures the video covers the full screen */
     z-index: -1; /* Places the video behind other content */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Place content above video */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding around content */
 }
 
 
@@ -236,6 +252,7 @@ body, html {
 .show {
     display: block !important;
 }
+
 
 .index-section1, .index-section2, .index-section3 {
     background-color: rgba(63, 2, 58, 0.863);
