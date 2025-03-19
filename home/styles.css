@@ -72,13 +72,9 @@ body {
     gap: 10px;
     position: relative; 
 }
-.logo-container {
+logo-container {
     position: fixed;  /* Position the logo relative to the viewport */
-<<<<<<< HEAD
-    top: 60px;         /* Vertically center the logo */
-=======
     top: 80px;         /* Vertically center the logo */
->>>>>>> 68d3ca9f7a459f49997f92b475b0202e9ca162cf
     left: 0;          /* Align the logo to the left */
     transform: translateY(-50%); /* Center the logo exactly in the middle */
     z-index: 10;      /* Ensure the logo is above nav-2 */
@@ -86,16 +82,11 @@ body {
   }
   
   .logo {
-<<<<<<< HEAD
-    width: 60px; /* Adjust the size as needed */
-    height: auto;
-=======
     width: 120px; /* Adjust the size as needed */
     height: 90px;
-    
->>>>>>> 68d3ca9f7a459f49997f92b475b0202e9ca162cf
 
   }
+
 
 .nav-2 a {
 
