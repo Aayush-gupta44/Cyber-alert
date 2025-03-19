@@ -78,7 +78,6 @@ body {
     justify-content: center; /* Centers .menu1 */
     align-items: center;
     background: linear-gradient(to right, #430243, #074d51);
-   
     padding: 8px;
     gap: 10px;
     position: relative; 
