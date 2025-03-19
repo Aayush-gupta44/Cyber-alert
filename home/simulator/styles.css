@@ -11,7 +11,8 @@ body {
     color: #fff;
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding-bottom: 20px; /* Prevent content from being hidden at the bottom */
 }
 
 /* Video Background only for main content */
@@ -172,6 +173,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Learn More Button Styling */
 #learnMoreBtn {
     background-image: url('backgimg.jpg'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the button */
@@ -196,6 +199,67 @@ footer {
     box-shadow: 0 0 25px rgba(255, 107, 107, 1); /* Enhanced neon glow on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
+
 #learnMoreBtn:focus {
     outline: none; /* Remove focus outline */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce font size for header */
+    }
+
+    header p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
+    .video-background {
+        height: 60%; /* Adjust video background height */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding */
+        width: 100%; /* Make sure main content uses full width */
+        max-width: 100%; /* Prevent overflow */
+    }
+
+    .quiz-question {
+        padding: 15px; /* Reduce padding inside quiz questions */
+        margin: 10px 0; /* Reduce margins between questions */
+    }
+
+    .quiz-btn {
+        font-size: 1em; /* Adjust button font size */
+        padding: 8px 15px; /* Reduce padding on buttons */
+        margin: 8px; /* Reduce button margin */
+    }
+
+    #learnMoreBtn {
+        font-size: 1.2em; /* Adjust font size for Learn More button */
+        padding: 12px 25px; /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Further reduce font size on smaller screens */
+    }
+
+    header p {
+        font-size: 0.9em; /* Further adjust paragraph font size */
+    }
+
+    .quiz-btn {
+        padding: 7px 12px; /* Smaller padding on buttons */
+    }
+
+    #learnMoreBtn {
+        font-size: 1.1em; /* Adjust font size even more */
+        padding: 10px 20px; /* Smaller padding */
+    }
 }
