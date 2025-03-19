@@ -1,14 +1,25 @@
 /* styles.css */
 
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     
 }
+#transition-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 9999; /* Ensure video is on top */
+}
 
 .header-1 {
-   
+   z-index: 8888;
     position: fixed;
     width: 100%;
     top: 0;
@@ -72,7 +83,7 @@ body {
     gap: 10px;
     position: relative; 
 }
-logo-container {
+.logo-container {
     position: fixed;  /* Position the logo relative to the viewport */
     top: 80px;         /* Vertically center the logo */
     left: 0;          /* Align the logo to the left */
@@ -168,6 +179,12 @@ logo-container {
     color: rgb(21, 108, 4);
 }
 
+.content {
+    text-align: center; /* Center content */
+    margin-top: 100px; /* Space from the top */
+}
+
+
 
 body, html {
     margin: 0;
@@ -184,6 +201,14 @@ body, html {
     height: 100vh;
     object-fit: cover; /* Ensures the video covers the full screen */
     z-index: -1; /* Places the video behind other content */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Place content above video */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding around content */
 }
 
 
@@ -237,19 +262,20 @@ body, html {
     display: block !important;
 }
 
+
 .index-section1, .index-section2, .index-section3 {
     background-color: rgba(63, 2, 58, 0.863);
     color: rgb(255, 255, 255);
     padding: 50px;
-    max-width: 770px;
-    right: 195px;
-    margin: 20px auto; /* Centers and adds space */
+    max-width: 60%;
+    right: 16%;
+    margin: 4% auto; /* Centers and adds space */
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
     border-radius: 1px;
     text-align: center;
     position: relative; /* Remove absolute positioning */
     z-index: -1; /* Sends it behind the navbar */
-    margin-top: 120px; /* Adjust this based on your navbar height */
+    margin-top: 12%; /* Adjust this based on your navbar height */
 }
 
 .index-section1 {
