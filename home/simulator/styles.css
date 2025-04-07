@@ -11,11 +11,11 @@ body {
     color: #fff;
     position: relative;
     min-height: 100vh;
-    overflow-y: auto; /* Allow vertical scrolling */
-    padding-bottom: 20px; /* Prevent content from being hidden at the bottom */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #222; /* Added background for body */
 }
 
-/* Video Background only for main content */
+/* Video Background Styling */
 .video-background {
     position: absolute;
     top: 0;
@@ -27,7 +27,11 @@ body {
 }
 
 #background-video {
-    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Ensures the video covers the entire screen */
     width: 100%;
     height: 100%;
 }
@@ -35,7 +39,7 @@ body {
 /* Header Styling */
 header {
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     background: rgba(0, 0, 0, 0.7);
     position: relative;
@@ -43,19 +47,20 @@ header {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation Bar Styling */
 nav {
     background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -67,13 +72,14 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav a {
     color: #f4f4f4;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 nav a:hover {
@@ -89,6 +95,38 @@ main {
     position: relative;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
+    overflow: hidden;
+}
+
+/* Scrollable Content Area */
+.content-wrapper {
+    max-height: 80vh; /* Set the max height to create a scrolling effect */
+    overflow-y: auto; /* Enable vertical scrolling inside this wrapper */
+    padding-right: 10px; /* For aesthetic space */
+    margin-top: 20px;
+}
+
+/* Headings for Information */
+h2, h3 {
+    font-size: 2em; /* Make subheadings bigger */
+    margin-top: 20px;
+    color: #ff6b6b; /* Set heading color to a more visible tone */
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Paragraph Styling */
+p, ul {
+    font-size: 1.2em; /* Increase font size for better readability */
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+ul {
+    margin-left: 30px;
 }
 
 /* Quiz Section Styling */
@@ -113,17 +151,19 @@ main {
     background-color: #ff6b6b;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
     margin: 10px;
-    transition: background-color 0.3s, transform 0.2s;
-    font-family: 'Courier New', Courier, monospace;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
     border-radius: 5px;
+    font-size: 1.1em;
 }
 
 .quiz-btn:hover {
     background-color: #f7d94c;
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Button Styling for Result Feedback */
@@ -166,7 +206,7 @@ main {
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background: #333;
     color: white;
     position: relative;
@@ -174,13 +214,13 @@ footer {
     width: 100%;
 }
 
-/* Learn More Button Styling */
+/* Styling for the "Learn More" Button */
 #learnMoreBtn {
     background-image: url('backgimg.jpg'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the button */
     background-position: center; /* Centers the background image */
     color: #ff6b6b; /* Neon pink text color */
-    font-family: 'Courier New', Courier, monospace; /* Font family */
+    font-family: 'Arial', sans-serif; /* Font family */
     font-size: 1.5em; /* Font size */
     padding: 15px 30px; /* Padding inside the button */
     border: none; /* Remove default border */
@@ -204,62 +244,63 @@ footer {
     outline: none; /* Remove focus outline */
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Adjust font size for smaller screens */
+    h1 {
+        font-size: 2.5em;
     }
 
-    header h1 {
-        font-size: 2em; /* Reduce font size for header */
+    h2 {
+        font-size: 2em;
     }
 
     header p {
-        font-size: 1em; /* Adjust paragraph font size */
-    }
-
-    .video-background {
-        height: 60%; /* Adjust video background height */
+        font-size: 1.1em;
     }
 
     main {
-        padding: 10px; /* Reduce padding */
-        width: 100%; /* Make sure main content uses full width */
-        max-width: 100%; /* Prevent overflow */
+        padding: 15px;
+        max-width: 100%;
     }
 
-    .quiz-question {
-        padding: 15px; /* Reduce padding inside quiz questions */
-        margin: 10px 0; /* Reduce margins between questions */
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 
     .quiz-btn {
-        font-size: 1em; /* Adjust button font size */
-        padding: 8px 15px; /* Reduce padding on buttons */
-        margin: 8px; /* Reduce button margin */
+        padding: 10px 20px;
+        font-size: 1em;
     }
 
-    #learnMoreBtn {
-        font-size: 1.2em; /* Adjust font size for Learn More button */
-        padding: 12px 25px; /* Adjust padding for mobile */
+    .content-wrapper {
+        max-height: 70vh;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em; /* Further reduce font size on smaller screens */
+    h1 {
+        font-size: 2em;
     }
 
-    header p {
-        font-size: 0.9em; /* Further adjust paragraph font size */
+    h2 {
+        font-size: 1.8em;
     }
 
-    .quiz-btn {
-        padding: 7px 12px; /* Smaller padding on buttons */
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p, ul {
+        font-size: 1.1em;
     }
 
     #learnMoreBtn {
-        font-size: 1.1em; /* Adjust font size even more */
-        padding: 10px 20px; /* Smaller padding */
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .quiz-btn {
+        padding: 8px 16px;
     }
 }
