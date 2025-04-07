@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content|My Cyber Shield</title>
-    <link rel="icon" type="image/PNG" href="../Icon of page.png"> 
-    <link rel="stylesheet" href="../common/header.css" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content | My Cyber Shield</title>
+    <link rel="icon" type="image/png" href="../Icon of page.png" />
+    <link rel="stylesheet" href="../common/header.css" type="text/css" />
+    <link rel="stylesheet" href="content.css" />
 </head>
 <body>
     <div id="header-container"></div>
 
+    <!-- Top section with video background and text -->
+    <div class="video-section">
+        <div class="video-background">
+            <video id="backgroundVideo" autoplay muted loop>
+                <source src="contentvideo.mp4" type="video/mp4" />
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="overlay-text">
+            <h1>Experience our Interactive Contents</h1>
+            <p>Imagine a classroom that is tailored for your one-to-one interaction with the teacher and the contents that come to life.</p>
+           
+               <button class="register btn"> <a href="./Register/register.html">ENROLL NOW & EXPLORE</a></button>
+        </div>
+    </div>
 
-
-
-    
+    <!-- White background offerings section -->
+    <div class="offerings-section">
+        <h2>Our Offerings</h2>
+        <p>Explore a wide range of interactive learning materials, quizzes, cybersecurity games, and personalized tutorials designed for you.</p>
+    </div>
 
     <script src="../common/fetch.js"></script>
-    <script src="../common/header.js"></script> 
-     
+    <script src="../common/header.js"></script>
 </body>
 </html>
