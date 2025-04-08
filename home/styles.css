@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #bd66858a;
+    background: #e9abc1bb;
     
 }
 #transition-video {
@@ -199,7 +199,7 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Ensures the video covers the full screen */
+    margin-left: 20%;
     z-index: -1; /* Places the video behind other content */
 }
 
@@ -264,10 +264,10 @@ body, html {
 
 
 .index-section1, .index-section2, .index-section3 {
-    background-color: rgba(63, 2, 58, 0.863);
+    background-color: #5f0424;
     color: rgb(255, 255, 255);
-    padding: 50px;
-    max-width: 60%;
+    padding: 18px;
+    max-width: 65%;
     right: 16%;
     margin: 4% auto; /* Centers and adds space */
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -279,22 +279,99 @@ body, html {
 }
 
 .index-section1 {
-    margin-top: 140px; /* Adds space below nav */
+    margin-top: 15px;
+}
+.index-section1 h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.index-section1 p{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+.index-section1 pre {
+    font-size: 18px;
     line-height: 1.6;
+    color: #dcdbdb;
+    margin-bottom: 30px;
+}
+.get-started-btn {
+    position: relative;     /* Needed for z-index to work */
+    z-index: 9999;          /* Very high value to bring it on top */
+    background-color: #079393;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.get-started-btn:hover {
+    background-image: url('backgimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+
+
+.index-section2 {
+    margin-top: 20px;
 }
 .index-section2 pre{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     line-height: 1;
 }
-
+.index-section3 {
+    margin-top: 20px;
+}
 .index-section3 pre{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     line-height: 1;
+}
+
+/* @font-face to import Pexico Micro Regular font */
+@font-face {
+    font-family: 'BloodyFont';
+    src: url('Melted\ Monster.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.intro-typing {
+    position: relative;
+    margin-top: 100px; /* Adjust height of your header here */
+    margin-left: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+    z-index: 2;
+}
+
+#typing-text {
+    font-family: 'BloodyFont', sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: rgb(148, 11, 11);
+    text-shadow: 5px 5px 10px rgba(207, 21, 21, 0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgb(255, 255, 255);
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: rgb(132, 4, 87);
+    }
+    50% {
+        border-color: transparent;
+    }
 }

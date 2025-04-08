@@ -22,7 +22,6 @@ body {
 }
 
 .subscription-box:hover {
-    transform: scale(1.05);
     border: 3px solid #ff4081;
 }
 
