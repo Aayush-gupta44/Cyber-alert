@@ -32,4 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+const typingTarget = document.getElementById("typing-text");
+const message = "Welcome to My Cyber Shield";
+let i = 0;
 
+function typeEffect() {
+    if (i < message.length) {
+        typingTarget.textContent += message.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+    }
+}
+
+// Delay typing by 2 seconds
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeEffect, 2000);
+});

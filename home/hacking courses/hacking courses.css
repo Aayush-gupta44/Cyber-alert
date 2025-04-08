@@ -30,20 +30,37 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    margin-left: 47%;
 }
 
 .go-back {
     padding: 8px 15px;
-    background: #ff6600;
+    background: #83024d;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    
 }
 
 .go-back:hover {
-    background: #e65c00;
+    background: #5a0481;
+}
+
+.quiz{
+    padding: 10px 15px;
+    background: #8b0353;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+
+.quiz:hover {
+    background: #5a0481;
 }
 
 /* Container */
@@ -59,14 +76,15 @@ body {
 /* Heading */
 .heading {
     font-size: 2.5rem;
+    background: #4d022dd4;
     width: 70%;
-    color: #1a0303;
-    background-color: #251f1f24;
+    color: white;
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 520;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
     padding: 10px;
 }
