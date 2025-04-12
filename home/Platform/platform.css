@@ -11,17 +11,16 @@
 
 
 .content {
-    background-color: rgba(63, 2, 58, 0.863);
+    background-color: rgba(15, 28, 87, 0.788);
     color: rgb(255, 255, 255);
-    padding: 50px;
-    max-width: 770px;
-    right: 195px;
+    padding: 70px;
+    max-width: 950px;
+    right: 20px;
     margin: 20px auto; /* Centers and adds space */
-    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
     border-radius: 1px;
     text-align: center;
     position: relative; /* Remove absolute positioning */
     z-index: -1; /* Sends it behind the navbar */
-    margin-top: 120px; /* Adjust this based on your navbar height */
+    margin-top: 250px; /* Adjust this based on your navbar height */
 }
 
