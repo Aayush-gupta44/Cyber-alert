@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Engineering Quiz</title>
+  <link rel="stylesheet" href="quizpages.css" />
+</head>
+<body>
+
+  <div class="video-background" aria-hidden="true">
+    <video autoplay muted loop id="background-video">
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <h1>Social Engineering Quiz</h1>
+    <p>Answer the questions below</p>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quizForm">
+      <!-- Page 1 -->
+      <div id="page1">
+        <div class="question">
+          <h3>1. What is social engineering in cybersecurity?</h3>
+          <div class="options">
+            <input type="radio" id="q1a" name="q1" value="a" required>
+            <label for="q1a">Manipulating people to reveal confidential info</label>
+
+            <input type="radio" id="q1b" name="q1" value="b">
+            <label for="q1b">Engineering social networks</label>
+
+            <input type="radio" id="q1c" name="q1" value="c">
+            <label for="q1c">Creating fake accounts</label>
+
+            <input type="radio" id="q1d" name="q1" value="d">
+            <label for="q1d">Developing social software</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>2. Which is a common type of social engineering attack?</h3>
+          <div class="options">
+            <input type="radio" id="q2a" name="q2" value="b" required>
+            <label for="q2a">Phishing</label>
+
+            <input type="radio" id="q2b" name="q2" value="a">
+            <label for="q2b">DDoS</label>
+
+            <input type="radio" id="q2c" name="q2" value="c">
+            <label for="q2c">Malware injection</label>
+
+            <input type="radio" id="q2d" name="q2" value="d">
+            <label for="q2d">Data compression</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>3. A social engineer might pretend to be:</h3>
+          <div class="options">
+            <input type="radio" id="q3a" name="q3" value="c" required>
+            <label for="q3a">An IT support staff</label>
+
+            <input type="radio" id="q3b" name="q3" value="a">
+            <label for="q3b">A programmer</label>
+
+            <input type="radio" id="q3c" name="q3" value="b">
+            <label for="q3c">An influencer</label>
+
+            <input type="radio" id="q3d" name="q3" value="d">
+            <label for="q3d">A security guard</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>4. What is pretexting?</h3>
+          <div class="options">
+            <input type="radio" id="q4a" name="q4" value="a" required>
+            <label for="q4a">Creating a fabricated scenario to get info</label>
+
+            <input type="radio" id="q4b" name="q4" value="b">
+            <label for="q4b">Sending mass spam emails</label>
+
+            <input type="radio" id="q4c" name="q4" value="c">
+            <label for="q4c">Scanning for open ports</label>
+
+            <input type="radio" id="q4d" name="q4" value="d">
+            <label for="q4d">Monitoring social media</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>5. How can you protect yourself from social engineering?</h3>
+          <div class="options">
+            <input type="radio" id="q5a" name="q5" value="d" required>
+            <label for="q5a">Verify identities before sharing info</label>
+
+            <input type="radio" id="q5b" name="q5" value="a">
+            <label for="q5b">Use a larger monitor</label>
+
+            <input type="radio" id="q5c" name="q5" value="b">
+            <label for="q5c">Keep your computer unlocked</label>
+
+            <input type="radio" id="q5d" name="q5" value="c">
+            <label for="q5d">Always click on links quickly</label>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <div id="page1-error" class="error-message" style="display:none;">Please answer all questions before continuing.</div>
+          <button type="button" class="quiz-btn" onclick="nextPage()">Next Page</button>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div id="page2" style="display:none;">
+        <div class="question">
+          <h3>6. What is baiting?</h3>
+          <div class="options">
+            <input type="radio" id="q6a" name="q6" value="a" required>
+            <label for="q6a">Leaving infected devices to lure victims</label>
+
+            <input type="radio" id="q6b" name="q6" value="b">
+            <label for="q6b">Fishing in dangerous waters</label>
+
+            <input type="radio" id="q6c" name="q6" value="c">
+            <label for="q6c">Stealing credentials</label>
+
+            <input type="radio" id="q6d" name="q6" value="d">
+            <label for="q6d">Encrypting sensitive data</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>7. What’s a common sign of a phishing email?</h3>
+          <div class="options">
+            <input type="radio" id="q7a" name="q7" value="c" required>
+            <label for="q7a">Urgent request for personal info</label>
+
+            <input type="radio" id="q7b" name="q7" value="a">
+            <label for="q7b">Invitation to a webinar</label>
+
+            <input type="radio" id="q7c" name="q7" value="b">
+            <label for="q7c">New software update</label>
+
+            <input type="radio" id="q7d" name="q7" value="d">
+            <label for="q7d">Normal business signature</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>8. Shoulder surfing involves:</h3>
+          <div class="options">
+            <input type="radio" id="q8a" name="q8" value="a" required>
+            <label for="q8a">Watching someone enter sensitive info</label>
+
+            <input type="radio" id="q8b" name="q8" value="b">
+            <label for="q8b">Surfing on social media</label>
+
+            <input type="radio" id="q8c" name="q8" value="c">
+            <label for="q8c">Using a VPN</label>
+
+            <input type="radio" id="q8d" name="q8" value="d">
+            <label for="q8d">Looking at search engine results</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>9. Which one is NOT a social engineering tactic?</h3>
+          <div class="options">
+            <input type="radio" id="q9a" name="q9" value="b" required>
+            <label for="q9a">Encryption algorithms</label>
+
+            <input type="radio" id="q9b" name="q9" value="a">
+            <label for="q9b">Phishing</label>
+
+            <input type="radio" id="q9c" name="q9" value="c">
+            <label for="q9c">Pretexting</label>
+
+            <input type="radio" id="q9d" name="q9" value="d">
+            <label for="q9d">Baiting</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>10. What should you do if you suspect a social engineering attack?</h3>
+          <div class="options">
+            <input type="radio" id="q10a" name="q10" value="d" required>
+            <label for="q10a">Report it to your security team</label>
+
+            <input type="radio" id="q10b" name="q10" value="a">
+            <label for="q10b">Ignore it and move on</label>
+
+            <input type="radio" id="q10c" name="q10" value="b">
+            <label for="q10c">Reply to the sender</label>
+
+            <input type="radio" id="q10d" name="q10" value="c">
+            <label for="q10d">Share it with others</label>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <div id="page2-error" class="error-message" style="display:none;">Please answer all questions before submitting.</div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="submit" class="quiz-btn">Submit Answers</button>
+            <button type="button" class="previous-btn" onclick="previousPage()">Previous Page</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Cybersecurity Awareness</p>
+  </footer>
+
+  <script>
+    function nextPage() {
+      if (!validatePage(1)) {
+        document.getElementById("page1-error").style.display = "block";
+        return;
+      }
+      document.getElementById("page1-error").style.display = "none";
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+
+    function previousPage() {
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page1").style.display = "block";
+    }
+
+    function validatePage(pageNumber) {
+      const questions = pageNumber === 1 ? ['q1', 'q2', 'q3', 'q4', 'q5'] : ['q6', 'q7', 'q8', 'q9', 'q10'];
+      return questions.every(q => document.querySelector(`input[name="${q}"]:checked`));
+    }
+
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (!validatePage(2)) {
+        document.getElementById("page2-error").style.display = "block";
+        return;
+      }
+
+      document.getElementById("page2-error").style.display = "none";
+
+      let score = 0;
+      const correctAnswers = {
+        q1: "a", q2: "b", q3: "c", q4: "a", q5: "d",
+        q6: "a", q7: "c", q8: "a", q9: "b", q10: "d"
+      };
+
+      for (let question in correctAnswers) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected && selected.value === correctAnswers[question]) {
+          score++;
+        }
+      }
+
+      alert("Your score is: " + score + "/10");
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>
