@@ -4,10 +4,10 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-}
+} 
 
 .common-footer {
-    background: linear-gradient(to right, #600242, #981442);
+    background: linear-gradient(to right, #480232, #810833);
     color: white;
     padding: 20px 0;
     display: flex;
