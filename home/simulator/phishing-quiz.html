@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Quiz</title>
+  <link rel="stylesheet" href="quizpages.css" />
+  <script src="scripts/score.js" defer></script>
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <h1>Phishing Quiz</h1>
+    <p>Answer the questions below</p>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quizForm">
+      <!-- Page 1 -->
+      <div id="page1">
+        <div class="question" id="q1">
+          <h3>1. What is phishing?</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q2">
+          <h3>2. Phishing usually involves:</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q3">
+          <h3>3. What info do phishers often want?</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q4">
+          <h3>4. One way to avoid phishing is:</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q5">
+          <h3>5. Legit companies will usually:</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="quiz-btn" onclick="nextPage()">Next Page</button>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div id="page2" style="display:none;">
+        <div class="question" id="q6">
+          <h3>6. Phishing emails often have:</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q7">
+          <h3>7. A phishing site will often:</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q8">
+          <h3>8. How can you detect phishing emails?</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q9">
+          <h3>9. What should you do if you suspect phishing?</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="question" id="q10">
+          <h3>10. What does a phishing attacker aim for?</h3>
+          <div class="options"></div>
+        </div>
+
+        <div class="button-group">
+          <div id="error-message" class="error-message">
+            Please answer all questions before proceeding.
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="submit" class="quiz-btn">Submit Answers</button>
+            <button type="button" class="previous-btn" onclick="previousPage()">Previous Page</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Cybersecurity Awareness</p>
+  </footer>
+
+  <script>
+    const questions = [
+      {
+        question: "What is phishing?",
+        options: [
+          { text: "A social engineering tactic", correct: true },
+          { text: "A type of malware", correct: false },
+          { text: "A firewall technique", correct: false },
+          { text: "A kind of antivirus", correct: false },
+        ]
+      },
+      {
+        question: "Phishing usually involves:",
+        options: [
+          { text: "Sending deceptive emails", correct: true },
+          { text: "Physical theft of devices", correct: false },
+          { text: "Installing software updates", correct: false },
+          { text: "Hardware malfunction", correct: false },
+        ]
+      },
+      {
+        question: "What info do phishers often want?",
+        options: [
+          { text: "Passwords and credit card details", correct: true },
+          { text: "Wi-Fi signals", correct: false },
+          { text: "Your location only", correct: false },
+          { text: "Gaming stats", correct: false },
+        ]
+      },
+      {
+        question: "One way to avoid phishing is:",
+        options: [
+          { text: "Not clicking suspicious links", correct: true },
+          { text: "Using public Wi-Fi", correct: false },
+          { text: "Ignoring antivirus updates", correct: false },
+          { text: "Sharing login details", correct: false },
+        ]
+      },
+      {
+        question: "Legit companies will usually:",
+        options: [
+          { text: "Never ask for passwords via email", correct: true },
+          { text: "Request passwords in popups", correct: false },
+          { text: "Always ask you to log in via email", correct: false },
+          { text: "Send attachments you didn’t request", correct: false },
+        ]
+      },
+      {
+        question: "Phishing emails often have:",
+        options: [
+          { text: "Generic greetings like 'Dear Customer'", correct: true },
+          { text: "Your name and address", correct: false },
+          { text: "Secure authentication requests", correct: false },
+          { text: "Attachments with the latest offers", correct: false },
+        ]
+      },
+      {
+        question: "A phishing site will often:",
+        options: [
+          { text: "Look similar to a legitimate website", correct: true },
+          { text: "Contain encrypted connections only", correct: false },
+          { text: "Ask for your social security number", correct: false },
+          { text: "Provide personal customer service", correct: false },
+        ]
+      },
+      {
+        question: "How can you detect phishing emails?",
+        options: [
+          { text: "Look for spelling mistakes and bad grammar", correct: true },
+          { text: "Check the sender's email address", correct: false },
+          { text: "Both of the above", correct: true },
+          { text: "Ignore and delete them immediately", correct: false },
+        ]
+      },
+      {
+        question: "What should you do if you suspect phishing?",
+        options: [
+          { text: "Report it to the company or organization", correct: true },
+          { text: "Ignore it", correct: false },
+          { text: "Respond to the email asking for clarification", correct: false },
+          { text: "Share it with friends to warn them", correct: false },
+        ]
+      },
+      {
+        question: "What does a phishing attacker aim for?",
+        options: [
+          { text: "Stealing sensitive personal information", correct: true },
+          { text: "Sending you offers to make money", correct: false },
+          { text: "Gaining access to your hardware", correct: false },
+          { text: "Running ads on your device", correct: false },
+        ]
+      }
+    ];
+
+    function shuffleOptions(options) {
+      for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+      }
+    }
+
+    function renderQuestions() {
+      questions.forEach((q, index) => {
+        shuffleOptions(q.options);
+
+        const questionDiv = document.getElementById(`q${index + 1}`);
+        const optionsDiv = questionDiv.querySelector(".options");
+        optionsDiv.innerHTML = '';
+
+        q.options.forEach((option, optionIndex) => {
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = `q${index + 1}`;
+          input.value = option.correct ? "correct" : "incorrect";
+          input.id = `q${index + 1}a${optionIndex}`;
+
+          const label = document.createElement("label");
+          label.setAttribute("for", input.id);
+          label.textContent = option.text;
+
+          optionsDiv.appendChild(input);
+          optionsDiv.appendChild(label);
+          optionsDiv.appendChild(document.createElement("br"));
+        });
+      });
+    }
+
+    function nextPage() {
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+
+    function previousPage() {
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page1").style.display = "block";
+    }
+    document.getElementById("quizForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const totalQuestions = questions.length;
+  let score = 0;
+  let answeredAll = true;
+
+  for (let i = 1; i <= totalQuestions; i++) {
+    const radios = document.getElementsByName(`q${i}`);
+    let answered = false;
+    for (const radio of radios) {
+      if (radio.checked) {
+        answered = true;
+        if (radio.value === "correct") {
+          score++;
+        }
+        break;
+      }
+    }
+    if (!answered) {
+      answeredAll = false;
+      break;
+    }
+  }
+
+  if (!answeredAll) {
+    document.getElementById("error-message").style.display = "block";
+    return;
+  } else {
+    document.getElementById("error-message").style.display = "none";
+  }
+
+  const percentage = Math.round((score / totalQuestions) * 100);
+
+  // Save to localStorage
+  localStorage.setItem("phishing-score", percentage);
+
+  // Redirect back to quiz selection page
+  alert(`Quiz submitted! Your score is ${percentage}%.`);
+  window.location.href = "quiz.html";
+});
+
+
+    window.onload = function() {
+      renderQuestions();
+    };
+  </script>
+
+</body>
+</html>

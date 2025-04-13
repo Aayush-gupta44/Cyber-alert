@@ -1,13 +1,18 @@
 /* styles.css */
 
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #e9abc1bb;
     
+}
+
+
+.header-1 {
+   z-index: 8888;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 #transition-video {
     position: fixed;
@@ -18,18 +23,12 @@ body {
     object-fit: cover;
     z-index: 9999; /* Ensure video is on top */
 }
-
-.header-1 {
-   z-index: 8888;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
 .nav-1, .nav-2 {
     transform: translateY(-50px);
     opacity: 0;
     animation: slideDown 1s ease-out forwards;
 }
+
 
 @keyframes slideDown {
     to {
@@ -200,8 +199,22 @@ body, html {
     width: 100vw;
     height: 100vh;
     margin-left: 20%;
-    z-index: -1; /* Places the video behind other content */
+    z-index: 1; /* Places the video behind other content */
+    filter: saturate(1.3) contrast(1.1) brightness(1.5) blur(0);
+    margin-top: 1%;
+
 }
+.background-video2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 7%;
+    filter: saturate(1.3) contrast(1.1) brightness(1.3) blur(0);
+  }
 
 .content {
     position: relative;
@@ -263,6 +276,7 @@ body, html {
 }
 
 
+
 .index-section1, .index-section2, .index-section3 {
     background-color: #5f0424;
     color: rgb(255, 255, 255);
@@ -270,7 +284,7 @@ body, html {
     max-width: 65%;
     right: 16%;
     margin: 4% auto; /* Centers and adds space */
-    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(10% 0, 100% 10%, 100% 100%, 0% 100%);
     border-radius: 1px;
     text-align: center;
     position: relative; /* Remove absolute positioning */
@@ -279,12 +293,48 @@ body, html {
 }
 
 .index-section1 {
+    position: relative; /* Required for child absolute positioning */
+    overflow: visible; /* Let the image overflow outside */
+}
+
+.floating-image {
+    position: absolute;
+    top: 50px;        /* Move image above */
+    right: 10px;      /* Move image outside to the right */
+    width: 350px;      /* Adjust size as needed */
+    height: auto;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
+    opacity: 0.30; /* Value from 0 (invisible) to 1 (fully visible) */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-image:hover {
+    transform: scale(1.05);
+}
+.floating-video {
+    position: relative;
+    width: 700px;      /* Adjust size as needed */
+    height: auto;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+     
+}
+
+.index-section1 {
     margin-top: 15px;
+    margin-left: 16%;
+    padding: 28px;
+    
 }
 .index-section1 h1 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 20px;
+    padding-left: 15px;
 }
 
 .index-section1 pre {
@@ -292,56 +342,55 @@ body, html {
     line-height: 1.6;
     color: #dcdbdb;
     margin-bottom: 30px;
+    background-color: #5f0424fe;
 }
 .get-started-btn {
     position: relative;     /* Needed for z-index to work */
-    z-index: 9999;          /* Very high value to bring it on top */
-    background-color: #079393;
-    color: white;
+    background-color: #047779;
     padding: 12px 25px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 5;
+    margin-top: 220px;
+    margin-left: 365px;
     font-size: 16px;
+    font-weight: 300;
     border: none;
     border-radius: 25px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none; 
 }
 
 
 .get-started-btn:hover {
-    background-image: url('backgimg.jpg');
+    background-color: #034a6d;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: black;
+    color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-decoration: underline;
 }
 
 
 .index-section2 {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .index-section2 pre{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    line-height: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dcdbdb;
+    margin-bottom: 20px;
 }
 .index-section3 {
     margin-top: 20px;
-}
-.index-section3 pre{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    line-height: 1;
+    clip-path: inset(0% 0% 0% 0%);
+    border-radius: 20px;
 }
 
 /* @font-face to import Pexico Micro Regular font */
 @font-face {
-    font-family: 'BloodyFont';
-    src: url('Melted\ Monster.ttf') format('truetype');
+    font-family: 'pexico micro';
+    src: url('PexicoMicro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -355,14 +404,14 @@ body, html {
 }
 
 #typing-text {
-    font-family: 'BloodyFont', sans-serif;
-    font-size: 50px;
+    font-family: 'pexico micro', sans-serif;
+    font-size: 40px;
     letter-spacing: 2px;
-    color: rgb(148, 11, 11);
-    text-shadow: 5px 5px 10px rgba(207, 21, 21, 0.9);
+    color: rgb(106, 7, 7);
+    text-shadow: 6px 6px 10px rgba(255, 11, 113, 0.995);
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(247, 0, 140);
     display: inline-block;
     animation: blink 1s step-end infinite;
 }

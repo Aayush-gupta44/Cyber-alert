@@ -1,0 +1,415 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.header-1 {
+   z-index: 8888;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.nav-1, .nav-2 {
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-1 {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #600242, #981442);
+    padding: 0.8px;
+    position: relative;
+    z-index: 100; /* Ensures it stays above nav-2 */
+}
+
+.nav-1 a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+.upmenu {
+    display: flex;
+    margin-left: auto;
+    gap: 2px;
+}
+.upmenu a:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scaleX(1);
+    text-decoration: underline;
+}
+.nav-2 {
+    
+    display: flex;
+    justify-content: center; /* Centers .menu1 */
+    align-items: center;
+    background: linear-gradient(to right, #430243, #074d51);
+    padding: 8px;
+    gap: 10px;
+    position: relative; 
+}
+.logo-container {
+    position: fixed;  /* Position the logo relative to the viewport */
+    top: 80px;         /* Vertically center the logo */
+    left: 0;          /* Align the logo to the left */
+    transform: translateY(-50%); /* Center the logo exactly in the middle */
+    z-index: 10;      /* Ensure the logo is above nav-2 */
+  
+  }
+  
+  .logo {
+    width: 120px; /* Adjust the size as needed */
+    height: 90px;
+
+  }
+
+
+.nav-2 a {
+
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu1 {
+    font-size: 14x;
+    font-family: sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    position: relative; /* Positioning context for the button */
+    text-align:center;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+.menu1 a:hover {
+    background-image: url('backgimg.jpg');
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scaleX(1);
+    text-decoration: underline;
+}
+
+
+.menu3 {
+    display: flex;
+    margin-left: auto;
+    gap: 3px;
+}
+.login, .register {
+    padding: 5px 10px; /* Reduce padding */
+    font-size: 14px; /* Reduce text size */
+    width: auto; /* Adjust width automatically */
+    height: auto; /* Adjust height automatically */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login {
+    background: linear-gradient(to right, #a30913d2, #9f0b81dd);
+    font-family:sans-serif;
+    font-weight: bold;
+    border: 2px solid rgb(188, 0, 91);
+    padding: 8px 8px;
+    border-radius: 100px;
+    color: blue;
+    transition: background 0.3s ease;
+}
+
+.register {
+    background: linear-gradient(to right, #930b5ddf, #02756edd);
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(0, 143, 88);
+    border: 2px solid rgb(140, 0, 183);
+    padding: 8px 8px;
+    border-radius: 100px;
+    transition: background 0.3s ease;
+}
+
+.login:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    color: rgb(17, 0, 74);
+}
+
+.register:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    color: rgb(21, 108, 4);
+}
+
+.content {
+    text-align: center; /* Center content */
+    margin-top: 100px; /* Space from the top */
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+.background-video {
+    position: fixed; /* Keeps the video in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 20%;
+    z-index: 1; /* Places the video behind other content */
+    filter: saturate(1.3) contrast(1.1) brightness(1.5) blur(0);
+    margin-top: 1%;
+
+}
+.background-video2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 7%;
+    filter: saturate(1.3) contrast(1.1) brightness(1.3) blur(0);
+  }
+
+.content {
+    position: relative;
+    z-index: 1; /* Place content above video */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding around content */
+}
+
+
+/* Three-Dots Button */
+.three-lines {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.menu2 {
+    position: absolute;
+    top: 1px; /* Adjust based on navbar */
+    left: 10px;
+    z-index: 9999; 
+}
+
+#mylist {
+    position: absolute;
+    left: 0;
+    background: #410326f6;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(193, 9, 150, 0.2);
+    display: none;
+    min-width: 200px;
+}
+
+#mylist li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(219, 209, 209);
+    padding: 10px 13px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 750;
+    transition: background 0.3s ease;
+}
+
+#mylist li a:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    
+}
+
+.show {
+    display: block !important;
+}
+
+
+.index-section1, .index-section2, .index-section3 {
+    background-color: #5f0424;
+    color: rgb(255, 255, 255);
+    padding: 18px;
+    max-width: 65%;
+    right: 16%;
+    margin: 4% auto; /* Centers and adds space */
+    clip-path: polygon(10% 0, 100% 10%, 100% 100%, 0% 100%);
+    border-radius: 1px;
+    text-align: center;
+    position: relative; /* Remove absolute positioning */
+    z-index: -1; /* Sends it behind the navbar */
+    margin-top: 12%; /* Adjust this based on your navbar height */
+}
+
+.index-section1 {
+    position: relative; /* Required for child absolute positioning */
+    overflow: visible; /* Let the image overflow outside */
+}
+
+.floating-image {
+    position: absolute;
+    top: 50px;        /* Move image above */
+    right: 10px;      /* Move image outside to the right */
+    width: 350px;      /* Adjust size as needed */
+    height: auto;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
+    opacity: 0.30; /* Value from 0 (invisible) to 1 (fully visible) */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-image:hover {
+    transform: scale(1.05);
+}
+.floating-video {
+    position: relative;
+    width: 700px;      /* Adjust size as needed */
+    height: auto;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+     
+}
+
+.index-section1 {
+    margin-top: 15px;
+    margin-left: 16%;
+    padding: 28px;
+    
+}
+.index-section1 h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.index-section1 pre {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dcdbdb;
+    margin-bottom: 30px;
+    background-color: #5f0424fe;
+}
+.get-started-btn {
+    position: relative;     /* Needed for z-index to work */
+    background-color: #047779;
+    padding: 12px 25px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 5;
+    margin-top: 220px;
+    margin-left: 365px;
+    font-size: 16px;
+    font-weight: 300;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none; 
+}
+
+
+.get-started-btn:hover {
+    background-color: #034a6d;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.index-section2 {
+    margin-top: 15px;
+}
+.index-section2 pre{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dcdbdb;
+    margin-bottom: 20px;
+}
+.index-section3 {
+    margin-top: 20px;
+    clip-path: inset(0% 0% 0% 0%);
+    border-radius: 20px;
+}
+
+/* @font-face to import Pexico Micro Regular font */
+@font-face {
+    font-family: 'pexico micro';
+    src: url('PexicoMicro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.intro-typing {
+    position: relative;
+    margin-top: 100px; /* Adjust height of your header here */
+    margin-left: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+    z-index: 2;
+}
+
+#typing-text {
+    font-family: 'pexico micro', sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: rgb(106, 7, 7);
+    text-shadow: 6px 6px 10px rgba(255, 11, 113, 0.995);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgb(247, 0, 140);
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: rgb(132, 4, 87);
+    }
+    50% {
+        border-color: transparent;
+    }
+}
