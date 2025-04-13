@@ -156,10 +156,8 @@
   
   /* Quiz Button */
   .quiz-btn {
-    background-image: url('backimg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #d63384;
+    background-color: black; /* Updated to black background */
+    color: white; /* White text on black background */
     border: none;
     padding: 12px 25px;
     cursor: pointer;
@@ -171,23 +169,9 @@
     overflow: hidden;
   }
   
-  .quiz-btn::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(214, 51, 132, 0);
-    transition: background-color 0.3s ease;
-    z-index: 1;
-    border-radius: 8px;
-  }
-  
-  .quiz-btn:hover::before {
-    background-color: rgba(214, 51, 132, 0.5);
-  }
-  
-  .quiz-btn span {
-    position: relative;
-    z-index: 2;
+  .quiz-btn:hover {
+    background-color: #444; /* Darker shade when hovering */
+    color: #f7d94c; /* Gold color for text on hover */
   }
   
   /* Score Box Below Button */

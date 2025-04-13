@@ -40,24 +40,28 @@
     height: 100%;
 }
 .register {
-    background: linear-gradient(to right, #930b5ddf, #02756edd);
-    background-size: 100% 100%; /* Make the background fit the button */
-    font-family: sans-serif;
-    font-weight: bold;
-    color: rgb(0, 143, 88);
-    border: 2px solid rgb(140, 0, 183);
-    border-radius: 50px;
-    padding: 10px 20px; /* Adjust padding to fit the text properly */
-    display: inline-block; /* Adjust width to the size of the text */
-    transition: background 0.3s ease;
+  background: linear-gradient(to right, #930b5ddf, #02756edd);
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(0, 143, 88);
+  border: 2px solid rgb(140, 0, 183);
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
 }
+
 
 .register a {
-    color: rgb(0, 143, 88);
-    text-decoration: none; /* Remove underline from the link */
-    display: inline-block;
+  color: rgb(0, 143, 88);
+  text-decoration: none;
+  display: inline-block;
+  width: 100%; /* 👈 Make link fit the button, or remove if unnecessary */
+  text-align: center;
 }
-
 
 
 .container {
