@@ -1,0 +1,195 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #222;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Quiz Section */
+.quiz-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Question */
+.question {
+    margin-bottom: 25px;
+}
+
+.question h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ff00ff; /* Neon Pink */
+}
+
+/* Option Labels */
+.options label {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent box */
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    color: #ff69b4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.options label:hover {
+    background-color: rgba(255, 105, 180, 0.3);
+    transform: scale(1.03);
+    color: white;
+}
+
+/* Hide native radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Custom image checkbox (unchecked and checked) */
+.options label span:first-child {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #ff69b4;
+    background-image: url('images/custom-radio-image.png'); /* Default image */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Checked state image */
+input[type="radio"]:checked + label span:first-child {
+    background-image: url('images/checked-radio-image.png'); /* Checked image */
+    transform: scale(1.2);
+}
+
+/* Make label green when selected */
+input[type="radio"]:checked + label {
+    background-color: rgba(0, 255, 0, 0.2); /* Light green */
+    border-color: #00ff00;
+    color: #00ff00; /* Green text */
+}
+
+/* Keep hover for label text only when not selected */
+.options label:hover span:last-child {
+    color: white;
+    background-color: rgba(255, 105, 180, 0.3);
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.quiz-btn,
+.previous-btn {
+    background-image: url('backimg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ff69b4;
+    border: 2px solid #ff69b4;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s;
+    box-shadow: 0 0 10px rgba(255, 107, 160, 0.5);
+    margin: 10px;
+}
+
+.quiz-btn:hover,
+.previous-btn:hover {
+    background-color: rgba(255, 105, 180, 0.5);
+    color: #fff;
+    border-color: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .quiz-btn,
+    .previous-btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .options label {
+        font-size: 1.1em;
+        flex-wrap: wrap;
+    }
+
+    .options label span:first-child {
+        width: 20px;
+        height: 20px;
+    }
+}

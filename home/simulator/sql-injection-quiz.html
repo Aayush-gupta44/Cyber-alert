@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL Injection Quiz</title>
+  <link rel="stylesheet" href="quizpages.css" />
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <h1>SQL Injection Quiz</h1>
+    <p>Test your knowledge about SQL injection and how to stay safe!</p>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quizForm">
+      <!-- Page 1 -->
+      <div id="page1">
+        <div class="question">
+          <h3>1. What does SQL stand for?</h3>
+          <div class="options">
+            <input type="radio" id="q1a" name="q1" value="a" required>
+            <label for="q1a">Structured Query Language</label>
+
+            <input type="radio" id="q1b" name="q1" value="b">
+            <label for="q1b">Standard Question List</label>
+
+            <input type="radio" id="q1c" name="q1" value="c">
+            <label for="q1c">Simple Quick Log</label>
+
+            <input type="radio" id="q1d" name="q1" value="d">
+            <label for="q1d">System Query Loader</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>2. What is SQL injection?</h3>
+          <div class="options">
+            <input type="radio" id="q2a" name="q2" value="b" required>
+            <label for="q2a">Injecting harmful code into a website</label>
+
+            <input type="radio" id="q2b" name="q2" value="a">
+            <label for="q2b">A way to make your site load faster</label>
+
+            <input type="radio" id="q2c" name="q2" value="c">
+            <label for="q2c">Sending a virus through email</label>
+
+            <input type="radio" id="q2d" name="q2" value="d">
+            <label for="q2d">A type of data backup</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>3. What can a hacker do with SQL injection?</h3>
+          <div class="options">
+            <input type="radio" id="q3a" name="q3" value="a" required>
+            <label for="q3a">Steal, delete or change data in databases</label>
+
+            <input type="radio" id="q3b" name="q3" value="b">
+            <label for="q3b">Fix errors on a website</label>
+
+            <input type="radio" id="q3c" name="q3" value="c">
+            <label for="q3c">Improve website design</label>
+
+            <input type="radio" id="q3d" name="q3" value="d">
+            <label for="q3d">Speed up downloads</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>4. Which part of a website is most likely to be attacked by SQL injection?</h3>
+          <div class="options">
+            <input type="radio" id="q4a" name="q4" value="d" required>
+            <label for="q4a">Login forms or search bars</label>
+
+            <input type="radio" id="q4b" name="q4" value="a">
+            <label for="q4b">Images</label>
+
+            <input type="radio" id="q4c" name="q4" value="b">
+            <label for="q4c">Download buttons</label>
+
+            <input type="radio" id="q4d" name="q4" value="c">
+            <label for="q4d">Background music</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>5. How can websites prevent SQL injection?</h3>
+          <div class="options">
+            <input type="radio" id="q5a" name="q5" value="c" required>
+            <label for="q5a">By checking and filtering user input</label>
+
+            <input type="radio" id="q5b" name="q5" value="a">
+            <label for="q5b">By adding more images</label>
+
+            <input type="radio" id="q5c" name="q5" value="b">
+            <label for="q5c">By using longer passwords</label>
+
+            <input type="radio" id="q5d" name="q5" value="d">
+            <label for="q5d">By using faster internet</label>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="quiz-btn" onclick="nextPage()">Next Page</button>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div id="page2" style="display:none;">
+        <div class="question">
+          <h3>6. Which symbol is often used in SQL injection attacks?</h3>
+          <div class="options">
+            <input type="radio" id="q6a" name="q6" value="a" required>
+            <label for="q6a">‘ (single quote)</label>
+
+            <input type="radio" id="q6b" name="q6" value="b">
+            <label for="q6b"># (hashtag)</label>
+
+            <input type="radio" id="q6c" name="q6" value="c">
+            <label for="q6c">@ (at sign)</label>
+
+            <input type="radio" id="q6d" name="q6" value="d">
+            <label for="q6d">& (ampersand)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>7. What might a hacker type in a login field to exploit SQL injection?</h3>
+          <div class="options">
+            <input type="radio" id="q7a" name="q7" value="d" required>
+            <label for="q7a">‘ OR 1=1 --</label>
+
+            <input type="radio" id="q7b" name="q7" value="a">
+            <label for="q7b">admin123</label>
+
+            <input type="radio" id="q7c" name="q7" value="b">
+            <label for="q7c">hello world</label>
+
+            <input type="radio" id="q7d" name="q7" value="c">
+            <label for="q7d">/login</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>8. SQL injection mainly targets:</h3>
+          <div class="options">
+            <input type="radio" id="q8a" name="q8" value="c" required>
+            <label for="q8a">Databases</label>
+
+            <input type="radio" id="q8b" name="q8" value="a">
+            <label for="q8b">Printers</label>
+
+            <input type="radio" id="q8c" name="q8" value="b">
+            <label for="q8c">Mouse settings</label>
+
+            <input type="radio" id="q8d" name="q8" value="d">
+            <label for="q8d">Screen brightness</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>9. Why is SQL injection dangerous?</h3>
+          <div class="options">
+            <input type="radio" id="q9a" name="q9" value="a" required>
+            <label for="q9a">It can give hackers full access to data</label>
+
+            <input type="radio" id="q9b" name="q9" value="b">
+            <label for="q9b">It helps websites load faster</label>
+
+            <input type="radio" id="q9c" name="q9" value="c">
+            <label for="q9c">It makes apps colorful</label>
+
+            <input type="radio" id="q9d" name="q9" value="d">
+            <label for="q9d">It helps block viruses</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>10. Who should fix or protect websites from SQL injection?</h3>
+          <div class="options">
+            <input type="radio" id="q10a" name="q10" value="b" required>
+            <label for="q10a">Web developers and security experts</label>
+
+            <input type="radio" id="q10b" name="q10" value="a">
+            <label for="q10b">Gamers</label>
+
+            <input type="radio" id="q10c" name="q10" value="c">
+            <label for="q10c">Graphic designers</label>
+
+            <input type="radio" id="q10d" name="q10" value="d">
+            <label for="q10d">Only school principals</label>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <div id="error-message" class="error-message">Please answer all questions before proceeding.</div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="submit" class="quiz-btn">Submit Answers</button>
+            <button type="button" class="previous-btn" onclick="previousPage()">Previous Page</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Web Security Basics</p>
+  </footer>
+
+  <script>
+    function nextPage() {
+      // Hide the current page and show the next
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+
+    function previousPage() {
+      // Hide the current page and show the previous one
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page1").style.display = "block";
+    }
+
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let score = 0;
+      const correctAnswers = {
+        q1: "a", q2: "b", q3: "a", q4: "d", q5: "c",
+        q6: "a", q7: "d", q8: "c", q9: "a", q10: "b"
+      };
+
+      // Check answers
+      for (let question in correctAnswers) {
+        const selected = document.querySelector(`input[name=${question}]:checked`);
+        if (selected && selected.value === correctAnswers[question]) {
+          score++;
+        }
+      }
+
+      // Show score and return to main page
+      alert("Your score is: " + score + "/10");
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>
