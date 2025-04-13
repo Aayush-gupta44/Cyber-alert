@@ -44,7 +44,12 @@ function typeEffect() {
     }
 }
 
-// Delay typing by 2 seconds
 window.addEventListener("DOMContentLoaded", () => {
-    setTimeout(typeEffect, 2000);
+    setTimeout(() => {
+        const audio = document.getElementById("intro-audio");
+        audio.play().catch((error) => {
+            console.log("Autoplay blocked by browser. Interaction required.");
+        });
+        typeEffect(); // Start typing after audio starts
+    }, 1500);
 });

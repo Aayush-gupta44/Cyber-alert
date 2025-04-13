@@ -1,38 +1,112 @@
-/* Reset default margins & padding */
-body, html {
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: #ffa3dc75;
 }
 
-
-
-/* Video Background */
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place it behind everything */
-    overflow: hidden;
-}
-
-/* Background Video */
-.background1-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Make video cover entire screen */
-}
-
-/* Overlay Text (h1) */
-.overlay-text {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Ensure proper centering */
+/* Index section just for background and clip */
+.index-section1, .index-section2 {
+    position: relative;
+    background: linear-gradient(to right, #600242, #981442);
     color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    z-index: 5; /* Above video but below iframe */
+    padding: 15px 20px;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 1px;
+    text-align: left;
+    margin: 100px auto 15px auto;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+
+
+/* Reversed clip-path and layout for alternating sections */
+.index-section2 {
+    background: linear-gradient(to right, #430243, #074d51);
+    clip-path: polygon(90% 0, 0% 0%, 0% 100%, 100% 100%);
+}
+
+
+
+/* Freely placed text */
+.index-section1 h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.index-section2 h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-left: 330px;
+    margin-bottom: 20px;
+    margin-right: 100px; /* Ensures text doesn't go behind the image */
+}
+
+.index-section1 p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dcdbdb;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    margin-right: 300px; /* Ensures text doesn't go behind the image */
+    white-space: pre-wrap;
+}
+.index-section2 p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dcdbdb;
+    margin-left: 330px;
+    margin-bottom: 30px;
+    margin-right: 100px; /* Ensures text doesn't go behind the image */
+    white-space: pre-wrap;
+}
+/* Adding 100px gap between sections */
+.index-section1, .index-section2 {
+    margin-top: 100px;
+}
+
+/* Fixed position for the images with defined width and height */
+.fixed-image-box, .fixed-image-box2, .fixed-image-box3, .fixed-image-box4, .fixed-image-box5, .fixed-image-box6 {
+    position: absolute;
+    z-index: 5;
+}
+
+.fixed-image-box img, .fixed-image-box2 img, .fixed-image-box3 img, .fixed-image-box4 img, .fixed-image-box5 img, .fixed-image-box6 img {
+    width: 300px; /* Set the width of the image */
+    height: 500px; /* Set the height of the image */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Position the images inside their containers */
+.fixed-image-box {
+    top: 20%;   /* Adjust this value to position the image */
+    right: 3%;  /* Adjust this value to position the image */
+}
+
+.fixed-image-box2 {
+    top: 100%;  /* Adjust this value to position the image */
+    left: 1%;  /* Adjust this value to position the image */
+}
+
+.fixed-image-box3 {
+    top: 170%;  /* Adjust this value to position the image */
+    right: 3%;  /* Adjust this value to position the image */
+}
+
+.fixed-image-box4 {
+    top: 250%;  /* Adjust this value to position the image */
+    left: 1%;   /* Adjust this value to position the image */
+}
+
+.fixed-image-box5 {
+    top: 320%;  /* Adjust this value to position the image */
+    right: 3%;  /* Adjust this value to position the image */
+}
+
+.fixed-image-box6 {
+    top: 400%;  /* Adjust this value to position the image */
+    left: 1%;   /* Adjust this value to position the image */
 }
