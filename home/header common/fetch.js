@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("../common/header.html")
+    fetch("../header common/header.html")
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Load CSS for header
                 let headerStyles = document.createElement("link");
                 headerStyles.rel = "stylesheet";
-                headerStyles.href = "../common/header.css";
+                headerStyles.href = "../header common/header.css";
                 document.head.appendChild(headerStyles);
 
                 // Load JavaScript for header
                 let headerScript = document.createElement("script");
-                headerScript.src = "../common/header.js";
+                headerScript.src = "../header common/header.js";
                 headerScript.onload = () => {
                     console.log("Header script loaded successfully.");
                     document.dispatchEvent(new Event("Cyber4LifeHeaderLoaded")); // Notify that header is loaded
