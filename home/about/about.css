@@ -87,7 +87,7 @@ body {
 }
 
 .fixed-image-box2 {
-    top: 100%;  /* Adjust this value to position the image */
+    top: 72%;  /* Adjust this value to position the image */
     left: 1%;  /* Adjust this value to position the image */
 }
 
@@ -97,16 +97,16 @@ body {
 }
 
 .fixed-image-box4 {
-    top: 250%;  /* Adjust this value to position the image */
+    top: 220%;  /* Adjust this value to position the image */
     left: 1%;   /* Adjust this value to position the image */
 }
 
 .fixed-image-box5 {
-    top: 320%;  /* Adjust this value to position the image */
-    right: 3%;  /* Adjust this value to position the image */
+    top: 280%;  /* Adjust this value to position the image */
+    right: 2%;  /* Adjust this value to position the image */
 }
 
 .fixed-image-box6 {
-    top: 400%;  /* Adjust this value to position the image */
+    top: 350%;  /* Adjust this value to position the image */
     left: 1%;   /* Adjust this value to position the image */
 }
