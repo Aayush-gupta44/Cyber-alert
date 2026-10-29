@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    background-color: #222;
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  /* Video Background Styling */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* Header */
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 3.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  header p {
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+  
+  /* Navigation Bar Styling */
+  nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  nav a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    overflow-y: auto;
+  }
+  
+  /* Main Heading */
+  main h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+  }
+  
+  /* Quiz Categories */
+  .quiz-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  /* Each Category Box */
+  .quiz-category {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff6b6b;
+    border-radius: 15px;
+    width: 320px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .quiz-category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 107, 107, 0.7);
+  }
+  
+  /* Category Icons */
+  .quiz-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px #ff6b6b);
+    transition: transform 0.3s ease;
+  }
+  
+  .quiz-category:hover .quiz-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #f7d94c);
+  }
+  
+  /* Category Titles and Descriptions */
+  .quiz-category h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  
+  .quiz-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #ddd;
+    line-height: 1.6;
+  }
+  
+  /* Quiz Button */
+  .quiz-btn {
+    background-color: black; /* Updated to black background */
+    color: white; /* White text on black background */
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .quiz-btn:hover {
+    background-color: #444; /* Darker shade when hovering */
+    color: #f7d94c; /* Gold color for text on hover */
+  }
+  
+  /* Score Box Below Button */
+  .quiz-score {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ff6b6b;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #f7d94c;
+    box-shadow: inset 0 0 5px rgba(255, 107, 107, 0.4);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .quiz-categories {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .quiz-category {
+      width: 90%;
+    }
+  }
+  

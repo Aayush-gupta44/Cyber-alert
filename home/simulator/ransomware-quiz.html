@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ransomware Quiz</title>
+  <link rel="stylesheet" href="quizpages.css" />
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <h1>Ransomware Quiz</h1>
+    <p>Test your knowledge about ransomware and how to stay protected!</p>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quizForm">
+      <!-- Page 1 -->
+      <div id="page1">
+        <div class="question">
+          <h3>1. What is ransomware?</h3>
+          <div class="options">
+            <input type="radio" id="q1a" name="q1" value="a" required>
+            <label for="q1a">Malware that encrypts data and demands payment</label>
+
+            <input type="radio" id="q1b" name="q1" value="b">
+            <label for="q1b">Software that speeds up your computer</label>
+
+            <input type="radio" id="q1c" name="q1" value="c">
+            <label for="q1c">A type of antivirus program</label>
+
+            <input type="radio" id="q1d" name="q1" value="d">
+            <label for="q1d">A tool for managing passwords</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>2. How does ransomware usually spread?</h3>
+          <div class="options">
+            <input type="radio" id="q2a" name="q2" value="a" required>
+            <label for="q2a">Through malicious email attachments and links</label>
+
+            <input type="radio" id="q2b" name="q2" value="b">
+            <label for="q2b">By visiting safe websites</label>
+
+            <input type="radio" id="q2c" name="q2" value="c">
+            <label for="q2c">Through physical USB drives</label>
+
+            <input type="radio" id="q2d" name="q2" value="d">
+            <label for="q2d">None of the above</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>3. What does ransomware typically do once installed?</h3>
+          <div class="options">
+            <input type="radio" id="q3a" name="q3" value="a" required>
+            <label for="q3a">Encrypts files and demands ransom for decryption</label>
+
+            <input type="radio" id="q3b" name="q3" value="b">
+            <label for="q3b">Creates a backup of files</label>
+
+            <input type="radio" id="q3c" name="q3" value="c">
+            <label for="q3c">Deletes files permanently</label>
+
+            <input type="radio" id="q3d" name="q3" value="d">
+            <label for="q3d">Installs antivirus software</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>4. Which of the following is NOT a typical ransom demand?</h3>
+          <div class="options">
+            <input type="radio" id="q4a" name="q4" value="a" required>
+            <label for="q4a">Payment in cryptocurrency</label>
+
+            <input type="radio" id="q4b" name="q4" value="b">
+            <label for="q4b">Payment in gift cards</label>
+
+            <input type="radio" id="q4c" name="q4" value="c">
+            <label for="q4c">Payment in cash</label>
+
+            <input type="radio" id="q4d" name="q4" value="d">
+            <label for="q4d">Payment in credit cards</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>5. How can you protect your system from ransomware?</h3>
+          <div class="options">
+            <input type="radio" id="q5a" name="q5" value="a" required>
+            <label for="q5a">By backing up your data regularly</label>
+
+            <input type="radio" id="q5b" name="q5" value="b">
+            <label for="q5b">By ignoring all system updates</label>
+
+            <input type="radio" id="q5c" name="q5" value="c">
+            <label for="q5c">By disabling antivirus software</label>
+
+            <input type="radio" id="q5d" name="q5" value="d">
+            <label for="q5d">By avoiding internet access</label>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="quiz-btn" onclick="nextPage()">Next Page</button>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div id="page2" style="display:none;">
+        <div class="question">
+          <h3>6. Which of these can be a consequence of a ransomware attack?</h3>
+          <div class="options">
+            <input type="radio" id="q6a" name="q6" value="a" required>
+            <label for="q6a">Loss of access to important files</label>
+
+            <input type="radio" id="q6b" name="q6" value="b">
+            <label for="q6b">Loss of internet connection</label>
+
+            <input type="radio" id="q6c" name="q6" value="c">
+            <label for="q6c">Faster computer performance</label>
+
+            <input type="radio" id="q6d" name="q6" value="d">
+            <label for="q6d">None of the above</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>7. Which of the following is a common form of ransomware?</h3>
+          <div class="options">
+            <input type="radio" id="q7a" name="q7" value="a" required>
+            <label for="q7a">CryptoLocker</label>
+
+            <input type="radio" id="q7b" name="q7" value="b">
+            <label for="q7b">Google Chrome</label>
+
+            <input type="radio" id="q7c" name="q7" value="c">
+            <label for="q7c">Adobe Reader</label>
+
+            <input type="radio" id="q7d" name="q7" value="d">
+            <label for="q7d">Microsoft Office</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>8. If you are infected with ransomware, what is the best first step?</h3>
+          <div class="options">
+            <input type="radio" id="q8a" name="q8" value="a" required>
+            <label for="q8a">Disconnect your computer from the internet</label>
+
+            <input type="radio" id="q8b" name="q8" value="b">
+            <label for="q8b">Pay the ransom</label>
+
+            <input type="radio" id="q8c" name="q8" value="c">
+            <label for="q8c">Try to remove the ransomware manually</label>
+
+            <input type="radio" id="q8d" name="q8" value="d">
+            <label for="q8d">Ignore the attack and continue working</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>9. What is a common sign of a ransomware infection?</h3>
+          <div class="options">
+            <input type="radio" id="q9a" name="q9" value="a" required>
+            <label for="q9a">A ransom note appears on your screen</label>
+
+            <input type="radio" id="q9b" name="q9" value="b">
+            <label for="q9b">Your files are suddenly very fast to open</label>
+
+            <input type="radio" id="q9c" name="q9" value="c">
+            <label for="q9c">You get a notification about a software update</label>
+
+            <input type="radio" id="q9d" name="q9" value="d">
+            <label for="q9d">You see advertisements popping up</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3>10. What should you do after removing ransomware from your system?</h3>
+          <div class="options">
+            <input type="radio" id="q10a" name="q10" value="a" required>
+            <label for="q10a">Restore your files from backups</label>
+
+            <input type="radio" id="q10b" name="q10" value="b">
+            <label for="q10b">Start using the system without any further action</label>
+
+            <input type="radio" id="q10c" name="q10" value="c">
+            <label for="q10c">Pay the ransom to get your files back</label>
+
+            <input type="radio" id="q10d" name="q10" value="d">
+            <label for="q10d">Delete all files immediately</label>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <div id="error-message" class="error-message">Please answer all questions before proceeding.</div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="submit" class="quiz-btn">Submit Answers</button>
+            <button type="button" class="previous-btn" onclick="previousPage()">Previous Page</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Cyber Security Awareness</p>
+  </footer>
+
+  <script>
+    function nextPage() {
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+
+    function previousPage() {
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page1").style.display = "block";
+    }
+
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let score = 0;
+      const correctAnswers = {
+        q1: "a", q2: "a", q3: "a", q4: "c", q5: "a",
+        q6: "a", q7: "a", q8: "a", q9: "a", q10: "a"
+      };
+
+      for (let question in correctAnswers) {
+        const selected = document.querySelector(`input[name=${question}]:checked`);
+        if (selected && selected.value === correctAnswers[question]) {
+          score++;
+        }
+      }
+
+      alert("Your score is: " + score + "/10");
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

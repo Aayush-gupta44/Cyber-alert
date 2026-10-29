@@ -1,0 +1,136 @@
+/* Style for the video section */
+ body {
+    background-color: #0d3747;
+ } 
+
+
+.video-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Video in background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#backgroundVideo {
+    object-fit: cover; /* Fill the container */
+    width: 100%;
+    height: 100%;
+}
+
+/* Text overlay on video */
+.overlay-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    background: #3333336d;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.register {
+  background: linear-gradient(to right, #930b5ddf, #02756edd);
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(0, 143, 88);
+  border: 2px solid rgb(140, 0, 183);
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+.register a {
+  color: rgb(0, 143, 88);
+  text-decoration: none;
+  display: inline-block;
+  width: 100%; /* 👈 Make link fit the button, or remove if unnecessary */
+  text-align: center;
+}
+
+
+.container {
+    margin-top: 3%;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .container h1 {
+    font-size: 36px;
+    color: #fbf6fc;
+    margin-bottom: 10px;
+  }
+ .container p {
+ font-size: 15px;
+ font-family: Arial, Helvetica, sans-serif;
+ color:#fbf6fc ;
+ 
+
+
+
+ } 
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .card {
+    background: rgba(230, 223, 227, 0.966);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 350px;
+    text-align: center;
+    margin-top: 35px;
+  }
+  
+  .card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    margin-bottom: 15px;
+    color: #020216;
+    font-size: 20px;
+  }
+  
+  .card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  .card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .card a:hover {
+    background-color: #0056b3;
+  }
+

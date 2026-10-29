@@ -1,0 +1,252 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.header-1 {
+   z-index: 9999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.nav-1, .nav-2 {
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-1 {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #600242, #981442);
+    padding: 0.8px;
+    position: relative;
+    z-index: 100; /* Ensures it stays above nav-2 */
+}
+
+.nav-1 a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+.upmenu {
+    display: flex;
+    margin-left: auto;
+    gap: 2px;
+}
+.upmenu a:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scaleX(1);
+    text-decoration: underline;
+}
+.nav-2 {
+    
+    display: flex;
+    justify-content: center; /* Centers .menu1 */
+    align-items: center;
+    background: linear-gradient(to right, #430243, #074d51);
+   
+    padding: 8px;
+    gap: 10px;
+    position: relative; 
+}
+.logo-container {
+    position: fixed;  /* Position the logo relative to the viewport */
+    top: 80px;         /* Vertically center the logo */
+    left: 0;          /* Align the logo to the left */
+    transform: translateY(-50%); /* Center the logo exactly in the middle */
+    z-index: 10;      /* Ensure the logo is above nav-2 */
+  
+  }
+  
+  .logo {
+    width: 120px; /* Adjust the size as needed */
+    height: 90px;
+
+  }
+
+
+.nav-2 a {
+
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu1 {
+    font-size: 14x;
+    font-family: sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    position: relative; /* Positioning context for the button */
+    text-align:center;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+.menu1 a:hover {
+    background-image: url('backgimg.jpg');
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scaleX(1);
+    text-decoration: underline;
+}
+
+
+.menu3 {
+    display: flex;
+    margin-left: auto;
+    gap: 3px;
+}
+.login, .register {
+    padding: 5px 10px; /* Reduce padding */
+    font-size: 14px; /* Reduce text size */
+    width: auto; /* Adjust width automatically */
+    height: auto; /* Adjust height automatically */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login {
+    background: linear-gradient(to right, #a30913d2, #9f0b81dd);
+    font-family:sans-serif;
+    font-weight: bold;
+    border: 2px solid rgb(188, 0, 91);
+    padding: 8px 8px;
+    border-radius: 100px;
+    color: blue;
+    transition: background 0.3s ease;
+}
+
+.register {
+    background: linear-gradient(to right, #930b5ddf, #02756edd);
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(0, 143, 88);
+    border: 2px solid rgb(140, 0, 183);
+    padding: 8px 8px;
+    border-radius: 100px;
+    transition: background 0.3s ease;
+}
+
+.login:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    color: rgb(17, 0, 74);
+}
+
+.register:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    color: rgb(21, 108, 4);
+}
+
+.content {
+    text-align: center; /* Center content */
+    margin-top: 100px; /* Space from the top */
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+.background-video {
+    position: fixed; /* Keeps the video in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the full screen */
+    z-index: -1; /* Places the video behind other content */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Place content above video */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding around content */
+}
+
+
+/* Three-Dots Button */
+.three-lines {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.menu2 {
+    position: absolute;
+    top: 1px; /* Adjust based on navbar */
+    left: 10px;
+    z-index: 9999; 
+}
+
+#mylist {
+    position: absolute;
+    left: 0;
+    background: #410326f6;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(193, 9, 150, 0.2);
+    display: none;
+    min-width: 200px;
+}
+
+#mylist li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(219, 209, 209);
+    padding: 10px 13px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 750;
+    transition: background 0.3s ease;
+}
+
+#mylist li a:hover {
+    background: linear-gradient(to right, #a8066cd2, #5f0399d3);
+    
+}
+
+.show {
+    display: block !important;
+}

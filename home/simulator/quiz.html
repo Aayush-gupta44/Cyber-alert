@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz - Categories</title>
+  <link rel="stylesheet" href="quizstyle.css" />
+</head>
+<body>
+
+  <!-- Background Video -->
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Cybersecurity Quiz</h1>
+    <p>Test your knowledge on various types of cyber attacks</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="quiz.html">Take the Quiz</a></li>
+      <li><a href="subscription.html" class="help-btn">Want Help?</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Select a Cyber Attack Category</h2>
+    <div class="quiz-categories">
+
+      <!-- Phishing -->
+      <div class="quiz-category">
+        <img src="images/phishing.png" alt="Phishing Icon" class="quiz-icon" />
+        <h3>Phishing</h3>
+        <p class="quiz-description">Tricking users through fake messages to steal personal info like passwords or credit cards.</p>
+        <!-- Link to phishing quiz page -->
+        <a href="phishing-quiz.html" class="quiz-btn"><span>Take the Quiz</span></a>
+        <div class="quiz-score" id="phishing-score">Score: Not attempted</div>
+      </div>
+
+      <!-- Malware -->
+      <div class="quiz-category">
+        <img src="images/malware.png" alt="Malware Icon" class="quiz-icon" />
+        <h3>Malware</h3>
+        <p class="quiz-description">Malicious software designed to harm, steal, or exploit devices or data.</p>
+        <!-- Link to malware quiz page -->
+        <a href="malware-quiz.html" class="quiz-btn"><span>Take the Quiz</span></a>
+        <div class="quiz-score" id="malware-score">Score: Not attempted</div>
+      </div>
+
+      <!-- Ransomware -->
+      <div class="quiz-category">
+        <img src="images/ransomware.png" alt="Ransomware Icon" class="quiz-icon" />
+        <h3>Ransomware</h3>
+        <p class="quiz-description">A type of malware that locks your files and demands payment to unlock them.</p>
+        <!-- Link to ransomware quiz page -->
+        <a href="ransomware-quiz.html" class="quiz-btn"><span>Take the Quiz</span></a>
+        <div class="quiz-score" id="ransomware-score">Score: Not attempted</div>
+      </div>
+
+      <!-- Social Engineering -->
+      <div class="quiz-category">
+        <img src="images/social-engineering.png" alt="Social Engineering Icon" class="quiz-icon" />
+        <h3>Social Engineering</h3>
+        <p class="quiz-description">Manipulating people to give up confidential information or perform risky actions.</p>
+        <!-- Link to social engineering quiz page -->
+        <a href="social-engineering-quiz.html" class="quiz-btn"><span>Take the Quiz</span></a>
+        <div class="quiz-score" id="social-engineering-score">Score: Not attempted</div>
+      </div>
+
+      <!-- DDoS -->
+      <div class="quiz-category">
+        <img src="images/ddos.png" alt="DDoS Icon" class="quiz-icon" />
+        <h3>DDoS Attacks</h3>
+        <p class="quiz-description">Overloading a website or network with traffic to make it crash or go offline.</p>
+        <!-- Link to DDoS quiz page -->
+        <a href="ddos-quiz.html" class="quiz-btn"><span>Take the Quiz</span></a>
+        <div class="quiz-score" id="ddos-score">Score: Not attempted</div>
+      </div>
+
+      <!-- SQL Injection -->
+      <div class="quiz-category">
+        <img src="images/sql-injection.png" alt="SQL Injection Icon" class="quiz-icon" />
+        <h3>SQL Injection</h3>
+        <p class="quiz-description">Manipulating SQL queries to execute unauthorized commands in the database.</p>
+        <!-- Link to SQL Injection quiz page -->
+        <a href="sql-injection-quiz.html" class="quiz-btn"><span>Take the Quiz</span></a>
+
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Cybersecurity Awareness</p>
+  </footer>
+
+</body>
+</html>

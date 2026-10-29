@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To MCS</title>
+    <link rel="icon" type="image/PNG" href="../Icon of page.png"> 
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+ 
+    <video autoplay loop muted class="background-video">
+        <source src="side video.webm" type="video/mp4">
+    </video>
+
+   
+    <div class="login-container">
+         <h5>Don't have an account?
+            <a href="../Register/register.html"><br>Register to begin an amazing journey!</a>
+         </h5>
+        <h3>Sign in to your account</h3>
+        <form>
+            <div class="input-group">
+                
+                <input type="text" id="username" placeholder="Enter Email/Username" required>
+            </div>
+            <div class="input-group">
+                
+                <input type="password" id="password" placeholder="Enter password" required>
+                <button type="button" id="togglePassword" class="toggle-password">Show</button>
+            </div>
+            <button class="sign-in" type="submit">Sign in</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div> 
+    <script src="./login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #222; /* Added background for body */
+}
+
+/* Video Background Styling */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    width: 100%;
+    height: 100%;
+}
+
+/* Header Styling */
+header {
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Bar Styling */
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff6b6b;
+}
+
+/* Main Content Area Styling */
+main {
+    padding: 20px;
+    max-width: 900px; /* Increase max width for larger box */
+    margin: auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Scrollable Content Area */
+.content-wrapper {
+    max-height: 80vh; /* Set the max height to create a scrolling effect */
+    overflow-y: auto; /* Enable vertical scrolling inside this wrapper */
+    padding-right: 10px; /* For aesthetic space */
+    margin-top: 20px;
+}
+
+/* Headings for Information */
+h2, h3 {
+    font-size: 2em; /* Make subheadings bigger */
+    margin-top: 20px;
+    color: #ff6b6b; /* Set heading color to a more visible tone */
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Paragraph Styling */
+p, ul {
+    font-size: 1.2em; /* Increase font size for better readability */
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+/* Quiz Section Styling */
+.quiz-question {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for each question */
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    display: none; /* Hide all questions initially */
+}
+
+/* Hover effect for quiz question boxes */
+.quiz-question:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling for Quiz */
+.quiz-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.quiz-btn:hover {
+    background-color: #f7d94c;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling for Result Feedback */
+.quiz-btn.correct {
+    background-color: green; /* Correct answer */
+}
+
+.quiz-btn.incorrect {
+    background-color: red; /* Incorrect answer */
+}
+
+/* Result and Remarks */
+#quizResult {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-align: center;
+}
+
+/* Remarks Styling */
+#remarks {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#remarks.unsatisfactory {
+    color: red;
+}
+
+#remarks.satisfactory {
+    color: #ff6b6b;
+}
+
+#remarks.excellent {
+    color: green;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styling for the "Learn More" Button */
+#learnMoreBtn {
+    background-image: url('backgimg.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the button */
+    background-position: center; /* Centers the background image */
+    color: #ff6b6b; /* Neon pink text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 1.5em; /* Font size */
+    padding: 15px 30px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to a pointer */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Align text inside the button */
+    display: inline-block; /* To make it behave like a button */
+    text-decoration: none; /* Remove underline from text */
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.8); /* Neon pink glow effect */
+}
+
+#learnMoreBtn:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay on hover */
+    color: #ff6b6b; /* Keep the neon pink text color on hover */
+    box-shadow: 0 0 25px rgba(255, 107, 107, 1); /* Enhanced neon glow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#learnMoreBtn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .quiz-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .content-wrapper {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p, ul {
+        font-size: 1.1em;
+    }
+
+    #learnMoreBtn {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .quiz-btn {
+        padding: 8px 16px;
+    }
+}

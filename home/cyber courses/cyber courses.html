@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSecurity Courses|My Cyber Shield</title>
+    <link rel="icon" type="image/PNG" href="../Icon of page.png"> 
+    <link rel="stylesheet" href="cyber courses.css">
+</head>
+<body>
+    
+    <div class="top-bar">
+        <a href="../simulator/index.html"><button class="quiz" onclick="history.back()">
+            Do You Want To Take A Quiz?</button></a>
+        <input type="text" class="search-bar" onkeyup="searchCourses()" placeholder="Search courses...">
+        <a href="../index.html"><button class="go-back" onclick="history.back()">Go Back</button></a>
+    </div>
+
+    <div class="container">
+        <h1 class="heading">Cyber security Courses</h1>
+        <div class="course-grid">
+            <!-- Course 1 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/course1.webp" alt="Ethical Hacking">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Ethical Hacking Basics</h2>
+                <p class="description">Learn the fundamentals of ethical hacking, penetration testing, and cyber laws.</p>
+                <p class="details">Educator: John Doe | Duration: 6 Weeks | Level: Beginner</p>
+                <div class="extra-details">
+                    <p>This course introduces you to the basics of ethical hacking, penetration testing, and cyber laws. You'll learn about key concepts like vulnerability assessments, security protocols, and the ethical aspects of hacking.</p>
+                    <p>Instructor Bio: John Doe is a seasoned ethical hacker with over 10 years of experience in the field. He has worked with multiple Fortune 500 companies to improve their cybersecurity infrastructure.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll </a>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/course2.jpeg" alt="Network Security">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Network Security</h2>
+                <p class="description">Protect networks using firewalls, encryption, and intrusion detection techniques.</p>
+                <p class="details">Educator: Sarah Lee | Duration: 8 Weeks | Level: Intermediate</p>
+                <div class="extra-details">
+                    <p>This course focuses on securing networks by using technologies like firewalls, encryption, VPNs, and intrusion detection systems. You'll also explore network monitoring and attack mitigation strategies.</p>
+                    <p>Instructor Bio: Sarah Lee is a network security expert with 12 years of experience in designing secure network infrastructures for global organizations.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/course3.jpeg" alt="Web Security">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Web Application Security</h2>
+                <p class="description">Learn to secure web apps against SQL injection, XSS, and CSRF attacks.</p>
+                <p class="details">Educator: Mike Smith | Duration: 7 Weeks | Level: Advanced</p>
+                <div class="extra-details">
+                    <p>This course dives into securing web applications from various attacks such as SQL injection, XSS, and CSRF. It also covers secure coding practices and security testing methodologies.</p>
+                    <p>Instructor Bio: Mike Smith is a cybersecurity consultant specializing in application security. He has led many penetration testing projects for high-profile clients.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/malware-analysis.jpg" alt="Threat Intelligence">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Cyber Threat Intelligence</h2>
+                <p class="description">Analyze cyber threats and improve security measures.</p>
+                <p class="details">Educator: David Brown | Duration: 10 Weeks | Level: Advanced</p>
+                <div class="extra-details">
+                    <p>This course provides in-depth knowledge of cyber threat intelligence, including methods of gathering, analyzing, and responding to emerging cyber threats.</p>
+                    <p>Instructor Bio: David Brown has worked in the cybersecurity industry for over 15 years and is an expert in threat intelligence and incident response.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+
+            <!-- Course 5 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/wireless-hacking.jpg" alt="Cloud Security">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Cloud Security Fundamentals</h2>
+                <p class="description">Secure cloud-based infrastructure with best practices.</p>
+                <p class="details">Educator: Emma White | Duration: 6 Weeks | Level: Beginner</p>
+                <div class="extra-details">
+                    <p>Cloud security covers topics like data protection, access control, and securing cloud platforms such as AWS, Azure, and Google Cloud. You'll learn industry best practices for cloud security management.</p>
+                    <p>Instructor Bio: Emma White is a cloud security architect with a focus on securing cloud infrastructure in enterprise environments.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+
+            <!-- Course 6 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/introduction.jpg" alt="Digital Forensics">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Digital Forensics</h2>
+                <p class="description">Investigate and analyze cybercrimes using forensic techniques.</p>
+                <p class="details">Educator: Laura Green | Duration: 8 Weeks | Level: Advanced</p>
+                <div class="extra-details">
+                    <p>This course covers the tools and techniques used in digital forensics to investigate cybercrimes, recover data, and analyze electronic evidence.</p>
+                    <p>Instructor Bio: Laura Green is a certified digital forensics examiner with extensive experience in law enforcement and corporate investigations.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+
+            <!-- Course 7 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/digital-forensics.jpg" alt="Penetration Testing">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Penetration Testing</h2>
+                <p class="description">Learn how to perform ethical hacking and penetration testing.</p>
+                <p class="details">Educator: Chris Black | Duration: 9 Weeks | Level: Intermediate</p>
+                <div class="extra-details">
+                    <p>This course will teach you penetration testing techniques, methodologies, and tools to identify vulnerabilities in networks, systems, and applications.</p>
+                    <p>Instructor Bio: Chris Black is an ethical hacker and penetration tester with years of experience in conducting security assessments for government agencies and private sectors.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+
+            <!-- Course 8 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/penetration-testing.jpg" alt="Mobile Security">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Mobile Security</h2>
+                <p class="description">Secure mobile devices against cyber threats.</p>
+                <p class="details">Educator: Daniel James | Duration: 6 Weeks | Level: Intermediate</p>
+                <div class="extra-details">
+                    <p>This course covers mobile security topics, including app security, securing Android and iOS devices, and protecting personal data from mobile threats.</p>
+                    <p>Instructor Bio: Daniel James is a mobile security expert specializing in protecting mobile applications and devices from evolving cyber threats.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll </a>
+            </div>
+
+            <!-- Course 9 -->
+            <div class="course" onclick="toggleCourseDetails(this)">
+                <div class="thumbnail">
+                    <img src="images/network-security.jpg" alt="Incident Response">
+                    <div class="lock">🔒</div>
+                </div>
+                <h2>Incident Response & Management</h2>
+                <p class="description">Learn how to handle cybersecurity incidents and breaches.</p>
+                <p class="details">Educator: Lisa Brown | Duration: 7 Weeks | Level: Advanced</p>
+                <div class="extra-details">
+                    <p>This course teaches the incident response process, from detection to containment and remediation of security incidents. You'll also cover strategies for creating an incident response plan.</p>
+                    <p>Instructor Bio: Lisa Brown is an expert in cybersecurity incident response and has helped various companies build their incident response frameworks.</p>
+                </div>
+                <a href="../Subscription/subscription.html" class="enroll">Enroll</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="common-footer"></div>
+
+<script src="cyber course.js"></script>
+
+</body>
+</html>

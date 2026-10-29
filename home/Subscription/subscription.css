@@ -1,0 +1,89 @@
+body {
+    background: linear-gradient(to right, #fff, #ffe6f2);
+    background-image: url(backgimg.jpg);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.subscription-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.subscription-box {
+    background: linear-gradient(to right, #e6dee7, #ffe6f2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.subscription-box:hover {
+    border: 3px solid #ff4081;
+}
+
+.most-popular {
+    background: #ff4081;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+.premium {
+    transform: scale(1.1);
+    
+}
+
+.premium:hover{
+    border: 3px solid #ff4081;
+}
+
+
+h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.duration {
+    font-size: 14px;
+    color: gray;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.subscribe-btn {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.subscribe-btn:hover {
+    background: #ff4081;
+}

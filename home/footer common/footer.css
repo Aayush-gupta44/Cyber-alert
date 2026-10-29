@@ -1,0 +1,77 @@
+/* footer.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+} 
+
+.common-footer {
+    background: linear-gradient(to right, #480232, #810833);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer-section {
+    margin: 10px;
+    min-width: 150px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #62e2cd;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact a, .footer-contact span {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+@media (max-width: 768px) {
+    .common-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin: 15px 0;
+    }
+}
